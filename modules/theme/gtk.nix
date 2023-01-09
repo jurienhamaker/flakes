@@ -16,7 +16,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Frappe-Pink";
+      name = "Catppuccin-Frappe-Dark";
     };
     cursorTheme = {
       name = "Catppuccin-Frappe-Dark";

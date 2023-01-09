@@ -63,7 +63,7 @@
   memory_display="off"
   battery_display="off"
   disk_display="off"
-  image_backend="kitty"
+  image_backend="foot"
   image_source="${./sakurafetch.png}"
   ascii_distro="auto"
   ascii_colors=(distro)

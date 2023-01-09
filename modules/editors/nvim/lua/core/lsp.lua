@@ -138,12 +138,12 @@ nvim_lsp.rust_analyzer.setup({
 })
 nvim_lsp.html.setup({
 	on_attach = on_attach,
-	cmd = { "/home/ruixi/.npm-global/bin/vscode-html-language-server", "--stdio" },
+	cmd = { "/home/jurien/.npm-global/bin/vscode-html-language-server", "--stdio" },
 })
 
 nvim_lsp.cssls.setup({
 	on_attach = on_attach,
-	cmd = { "/home/ruixi/.npm-global/bin/vscode-css-language-server", "--stdio" },
+	cmd = { "/home/jurien/.npm-global/bin/vscode-css-language-server", "--stdio" },
 })
 
 nvim_lsp.zk.setup({
@@ -152,11 +152,11 @@ nvim_lsp.zk.setup({
 
 nvim_lsp.tsserver.setup({
 	on_attach = on_attach,
-	cmd = { "/home/ruixi/.npm-global/bin/typescript-language-server", "--stdio" },
+	cmd = { "/home/jurien/.npm-global/bin/typescript-language-server", "--stdio" },
 })
 
 nvim_lsp.bashls.setup({
-	cmd = { "/home/ruixi/.npm-global/bin/bash-language-server", "start" },
+	cmd = { "/home/jurien/.npm-global/bin/bash-language-server", "start" },
 })
 
 nvim_lsp.rnix.setup({

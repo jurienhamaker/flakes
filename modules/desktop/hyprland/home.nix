@@ -137,8 +137,8 @@
         sensitivity = -0.5
       }
 
-      bind = $mainMod, Return, exec, kitty fish
-      bind = $mainMod SHIFT, Return, exec, kitty --class="termfloat" fish
+      bind = $mainMod, Return, exec, foot fish
+      bind = $mainMod SHIFT, Return, exec, foot --class="termfloat" fish
       bind = $mainMod SHIFT, P, killactive,
       bind = $mainMod SHIFT, Q, exit,
       bind = $mainMod SHIFT, Space, togglefloating,
@@ -246,7 +246,6 @@
       #------------------------# 
       bind=$mainMod,B,exec,firefox
       bind=$mainMod,M,exec,netease-cloud-music-gtk4 
-      bind=$mainMod SHIFT,D,exec,kitty  --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml"
       bind=$mainMod SHIFT,X,exec,myswaylock
       bind=$mainMod,T,exec,telegram-desktop
       bind=$mainMod,Q,exec,icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland
@@ -344,7 +343,7 @@
       windowrule=opacity 0.95,title:Telegram
       windowrule=opacity 0.95,title:QQ
       windowrule=opacity 0.95,title:NetEase Cloud Music Gtk4
-      windowrule=animation slide right,kitty
+      windowrule=animation slide right,foot
       windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, title:Telegram
       windowrule=workspace name:Music, title:NetEase Cloud Music Gtk4

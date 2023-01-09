@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-  user = "ruixi";
+  user = "jurien";
 in
 {
   environment.systemPackages = with pkgs; [
@@ -247,7 +247,7 @@ in
           "format-disconnected" = "";
           "on-click" = "mpc --quiet toggle";
           "on-click-right" = "mpc ls | mpc add";
-          "on-click-middle" = "kitty ncmpcpp";
+          "on-click-middle" = "foot ncmpcpp";
           "on-scroll-up" = "mpc --quiet prev";
           "on-scroll-down" = "mpc --quiet next";
           "smooth-scrolling-threshold" = 5;

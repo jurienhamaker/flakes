@@ -156,7 +156,7 @@
     #----------------------------------#
     # Your preferred terminal emulator #
     #----------------------------------#
-        set $term kitty
+        set $term foot
         
     #-------------------------------------#
     # Your preferred application launcher #
@@ -232,13 +232,12 @@
     #----------------#
         # Start a terminal
         bindsym $mod+Return exec $term
-        bindsym $mod+Shift+Return exec kitty --class="termfloat"
+        bindsym $mod+Shift+Return exec foot --class="termfloat"
 
 
         # quick start some applications
         bindsym $mod+m exec --no-startup-id              netease-cloud-music
         bindsym $mod+b exec --no-startup-id              firefox
-        bindsym $mod+Shift+d exec kitty --class="danmufloat" --hold sh -c "cd /home/ruixi/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && go run main.go -c config.toml" 
         bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
         bindsym $mod+t exec --no-startup-id              telegram-desktop
         bindsym $mod+q exec --no-startup-id              icalingua-plus-plus --enable-features=UseOzonePlatform --ozone-platform=wayland

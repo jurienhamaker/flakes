@@ -1,16 +1,14 @@
 [
-  ./kitty.nix
+  ./foot.nix
   ./btop/btop.nix
   ./rofi.nix
   ./cava.nix
-  ./obs-studio/obs_studio.nix
   ./notification.nix
   ./music.nix
   ./search.nix
   ./yt-dlp.nix
   ./mpv/mpv.nix
   ./imgview.nix
-  ./dbeaver.nix
   ./lazygit.nix
   ./neofetch/neofetch.nix
   ./firefox/firefox.nix

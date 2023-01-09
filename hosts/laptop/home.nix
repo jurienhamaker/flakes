@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, impermanence, ... }:
+{ config, lib, pkgs, user, secrets, impermanence, ... }:
 
 {
   imports =
@@ -12,8 +12,12 @@
     (import ../../modules/devlop);
 
   home = {
-    username = "ruixi";
-    homeDirectory = "/home/ruixi";
+    username = "jurien";
+    homeDirectory = "/home/jurien";
+    file = {
+      ".ssh/id_rsa".text = secrets.jurien.sshKeys.private;
+      ".ssh/id_rsa.pub".text = secrets.jurien.sshKeys.public;
+    };
   };
   programs = {
     home-manager.enable = true;

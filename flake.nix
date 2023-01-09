@@ -12,7 +12,6 @@
       hypr-contrib.url = "github:hyprwm/contrib";
       flake-utils.url = "github:numtide/flake-utils";
       nixpkgs-review.url = "github:Mic92/nixpkgs-review";
-      sops-nix.url = "github:Mic92/sops-nix";
       hyprland = {
         url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -23,10 +22,10 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, sops-nix, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, ... }:
     let
-      user = "ruixi";
-      domain = "rayxi.top";
+      user = "jurien";
+      domain = "yugen-laptop";
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (
@@ -37,6 +36,7 @@
             overlays = [
             ];
           };
+          secrets = import ./secrets/secrets.nix;
         in
         {
           devShells = {
@@ -54,10 +54,6 @@
             };
             secret = with pkgs; mkShell {
               nativeBuildInputs = [
-                sops
-                age
-                ssh-to-age
-                ssh-to-pgp
               ];
               shellHook = ''
                 export PS1="\e[0;31m(Secret)\$ \e[m" 
@@ -72,7 +68,8 @@
         import ./hosts {
           # Imports ./hosts/default.nix
           inherit (nixpkgs) lib;
-          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker sops-nix;
+          inherit secrets;
+          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker;
         }
       );
     };

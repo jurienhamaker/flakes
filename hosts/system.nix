@@ -4,16 +4,12 @@
   nixpkgs.system = "x86_64-linux";
 
   networking = {
-    hostName = "RuiXi"; # Define your hostname.
+    hostName = "yugen-laptop"; # Define your hostname.
     networkmanager.enable = true;
     hosts = {
-      "185.199.109.133" = [ "raw.githubusercontent.com" ];
-      "185.199.111.133" = [ "raw.githubusercontent.com" ];
-      "185.199.110.133" = [ "raw.githubusercontent.com" ];
-      "185.199.108.133" = [ "raw.githubusercontent.com" ];
     };
   };
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "Europe/Amsterdam";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -48,7 +44,6 @@
       pciutils
       gdb
       killall
-      nodejs
       socat
       zip
       rar

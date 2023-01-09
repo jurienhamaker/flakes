@@ -1,4 +1,4 @@
-{ config, pkgs, user, inputs, ... }:
+{ config, pkgs, user, inputs, secrets, ... }:
 
 {
   imports =
@@ -11,21 +11,19 @@
     (import ../../modules/hardware) ++
     (import ../../modules/virtualisation);
 
-  sops.defaultSopsFile = ../../secrets/secrets.yaml;
   users.mutableUsers = false;
-  users.users.root.initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
+  users.users.root.initialHashedPassword = secrets.jurien.password;
   users.users.${user} = {
-    initialHashedPassword = "$6$4lwj3AGq8M9CQE2.$q8cNPghWHTl/dfE0dMPm2vsh0cMpY2gWxw91/Uadi8jShbvUHJJu3Jg0CvSpqrlEB7a3kvWDf/p2CI3mSqP1c/";
+    initialHashedPassword = secrets.jurien.password;
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = with pkgs; [
-      tdesktop
-      qq
       feishu
       pkgs.sway-contrib.grimshot
       imagemagick
-      thunderbird
+      rofi-wayland
+      wl-clipboard
     ];
   };
   boot = {
@@ -63,7 +61,7 @@
         "/var/log"
         "/var/lib"
       ];
-      users.ruixi = {
+      users.jurien = {
         directories = [
           "Downloads"
           "Music"
@@ -71,10 +69,7 @@
           "Documents"
           "Videos"
           ".cache"
-          "Codelearning"
-          ".npm-global"
           ".config"
-          ".thunderbird"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
@@ -119,7 +114,7 @@
   };
 
   services = {
-    getty.autologinUser = "ruixi";
+    getty.autologinUser = "jurien";
     gvfs.enable = true;
     pipewire = {
       enable = true;
@@ -131,13 +126,45 @@
     openssh = {
       enable = true;
     };
+    dunst = {
+        enable = true;
+        settings = {
+          global = {
+            width = "(0, 360)";
+            height = 136;
+            offset = "12x12";
+            frame_width = 0;
+            padding = 8;
+            font = "Noto Sans 10";
+            max_icon_size = 14;
+            corner_radius = 12;
+            separator_height = 1;
+            separator_color = "#4a4a4a";
+          };
+          urgency_low = {
+            background = "#0a0a0a";
+            foreground = "#b0b0b0";
+            timeout = 3;
+          };
+          urgency_normal = {
+            background = "#0a0a0a";
+            foreground = "#b0b0b0";
+            timeout = 5;
+          };
+          urgency_critical = {
+            background = "#a54242";
+            foreground = "#0a0a0a";
+            timeout = 7;
+          };
+        };
+      };
   };
 
   security.polkit.enable = true;
   security.sudo = {
     enable = false;
     extraConfig = ''
-      ruixi ALL=(ALL) NOPASSWD:ALL
+      jurien ALL=(ALL) NOPASSWD:ALL
     '';
   };
   security.doas = {

@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, sops-nix, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
@@ -22,7 +22,6 @@ in
       nur.nixosModules.nur
       ../modules/programs/nurpkgs.nix
       hyprland.nixosModules.default
-      sops-nix.nixosModules.sops
       home-manager.nixosModules.home-manager
       {
         home-manager.useGlobalPkgs = true;
