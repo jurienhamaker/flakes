@@ -1,19 +1,10 @@
 [![NixOS](https://github.com/JurienHamaker/nixos-config/actions/workflows/NixOS.yml/badge.svg)](https://github.con/JurienHamaker/nixos-config/actions/workflows/NixOS.yml)
 
-<p align="center"><img src="https://user-images.githubusercontent.com/75824585/210402874-da3422d5-ab65-4975-b73a-c300065c6792.png" width=300px></p>
 <h2 align="center">JurienHamaker's NixOS Config</h2>
-<p align="center"><img src="https://user-images.githubusercontent.com/75824585/196195007-ecebb290-2c6b-4fab-9e1e-2dbb12f7eb44.png" width=300px></p>
-
-https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-91a6-c30281d46e7a.mp4
 
 ### Screenshot
 
-<details>
-<summary><b>Click to expend</b></summary>
-
 ![](https://user-images.githubusercontent.com/18376682/196764533-6d199f97-1402-47dc-b4c9-8ffd92e8de37.png)
-
-</details>
 
 ### Structure
 
@@ -43,10 +34,7 @@ https://user-images.githubusercontent.com/75824585/201473117-578af0df-e4ea-4dc9-
 │   ├── catppuccin-cursors
 │   ├── catppuccin-gtk
 │   └── default.nix
-├── README_en.md
-├── README.md
-└── screenshot
-    └── screenshot.png
+└── README.md
 ```
 
 ## How to install ?(root on tmpfs)
