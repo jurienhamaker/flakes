@@ -32,6 +32,7 @@ in
         settings = [{
           position = "top";
           margin = "12 12 0 12";
+          height = 16;
           modules-left = [ "wlr/workspaces" ];
           modules-center = [ "clock" "clock#time" ];
           modules-right = [ "network" "pulseaudio" "custom/bluetooth" "battery" "custom/power" ];
@@ -56,8 +57,8 @@ in
             tooltip = false;
           };
           "battery" = {
-            format = "{icon} {capacity}%";
-            format-charging = " {capacity}%";
+            format = "{icon}  {capacity}%";
+            format-charging = "  {capacity}%";
             format-icons = [ "" "" "" "" "" ];
             tooltip = false;
           };
@@ -76,6 +77,9 @@ in
       style = ''
           * {
             min-height: 0;
+            padding: 0;
+            margin: 0;
+            border: 0;
           }
           #waybar {
             background: transparent;
@@ -97,18 +101,21 @@ in
           }
           #custom-power {
             background-color: #a54242;
+            padding: 0 12px 0 8px;
           }
           #clock, #network {
             border-radius: 8px 0 0 8px;
           }
-          #workspaces, #workspaces button {
-            padding: 0 2px 0 2px;
+          #workspaces {
             border-radius: 8px;
+            padding: 2px 2px;
+          }
+          #workspaces button {
+            padding: 4px;
+            margin: 1px;
           }
           #workspaces button.active {
             border-radius: 50%;
-            padding: 0 4px;
-            margin: 4px 0 4px 0;
           }
           #network.disconnected {
             color: #4a4a4a;

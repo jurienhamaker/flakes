@@ -126,7 +126,7 @@
           bindm = SUPER,mouse:273,resizewindow
           exec-once = dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP
           exec-once = ${pkgs.gammastep}/bin/gammastep -l 19:72
-          exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i ~/Pictures/Wallpapers/default -m fill
+          exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i "${./background/default.png}" -m fill
           exec-once = TERM='xterm-256color' waybar
           exec-once = foot -s
           exec-once = dunst
