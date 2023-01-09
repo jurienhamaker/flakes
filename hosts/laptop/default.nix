@@ -116,7 +116,6 @@
       pkgs.rust-bin.stable.latest.default
       blender
       (writeScriptBin "sudo" ''exec doas "$@"'')
-      (writeScriptBin "sudoedit" ''exec ${doasedit-git}/doasedit "$@"'')
     ];
   };
 
