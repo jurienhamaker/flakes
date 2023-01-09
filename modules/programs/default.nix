@@ -17,4 +17,5 @@
   ./ranger/ranger.nix
   ./fcitx5/fcitx5-theme.nix
   ./weston/weston.nix
+  ./vscode.nix
 ]
