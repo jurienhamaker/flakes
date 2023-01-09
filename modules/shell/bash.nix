@@ -29,7 +29,7 @@
       p_act = "p; cd paperless; act -P ubuntu-latest=nektos/act-environments-ubuntu:18.04";
       pn_up = "p; cd paperless; docker-compose up ng-playground";
       pn_bash = "p; cd paperless; docker-compose exec ng-playground bash";
-      nrs: "cd ~/Flakes; sudo nixos-rebuild switch --flake '.?submodules=true#laptop'";
+      nrs = "cd ~/Flakes; sudo nixos-rebuild switch --flake '.?submodules=true#laptop'";
     };
   };
 }
