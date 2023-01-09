@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, secrets, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
@@ -14,7 +14,7 @@ in
   laptop = lib.nixosSystem {
     # Laptop profile
     inherit system;
-    specialArgs = { inherit inputs user; };
+    specialArgs = { inherit inputs secrets user; };
     modules = [
       ./laptop
       impermanence.nixosModules.impermanence
