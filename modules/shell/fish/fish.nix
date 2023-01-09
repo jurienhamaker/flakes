@@ -23,5 +23,6 @@
   home.file.".config/fish/functions/owf.fish".text = import ./functions/owf.nix;
   home.file.".config/fish/functions/xdg-get.fish".text = import ./functions/xdg-get.nix;
   home.file.".config/fish/functions/xdg-set.fish".text = import ./functions/xdg-set.nix;
+  home.file.".config/fish/functions/aliases.fish".text = import ./functions/aliases.nix;
   home.file.".config/fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
 }
