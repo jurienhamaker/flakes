@@ -15,7 +15,7 @@
   i18n.extraLocaleSettings = {
     LC_MESSAGES = "en_US.UTF-8";
     LC_TIME = "nl_NL.UTF-8";
-  }
+  };
 
   security.rtkit.enable = true;
   services = {
