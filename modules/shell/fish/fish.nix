@@ -11,8 +11,8 @@
     '';
   };
   home.file.".config/fish/conf.d/mocha.fish".text = import ./conf.d/mocha_theme.nix;
+  home.file.".config/fish/conf.d/aliases.fish".text = import ./conf.d/aliases.nix;
   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
-  home.file.".config/fish/config.fish".text = import ./functions/config.nix;
   home.file.".config/fish/functions/f.fish".text = import ./functions/f.nix;
   home.file.".config/fish/functions/l.fish".text = import ./functions/l.nix;
   home.file.".config/fish/functions/n.fish".text = import ./functions/n.nix;
