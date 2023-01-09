@@ -1,7 +1,6 @@
 {
   description = "My Personal NixOS Configuration";
-  metadata.fetch-git-submodules = true;
-  
+
   inputs =
     {
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
