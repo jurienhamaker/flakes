@@ -20,7 +20,7 @@
   users.users.root.initialHashedPassword = secrets.jurien.password;
   users.users.${user} = {
     initialHashedPassword = secrets.jurien.password;
-    # shell = pkgs.fish;
+    shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = with pkgs; [
