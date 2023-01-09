@@ -111,16 +111,12 @@
       extraPolicies = {
         DisplayBookmarksToolbar = true;
         Preferences = {
-          "browser.toolbars.bookmarks.visibility" = "never";
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
           "media.ffmpeg.vaapi.enabled" = true;
         };
       };
     };
     profiles.default = {
-      settings = {
-        "browser.startup.homepage" = "file://${./homepage.html}";
-      };
       userChrome = ''
               /*================== SIDEBAR ==================*/
         #sidebar-box,
@@ -160,8 +156,8 @@
                 border-color: var(--base_color2) !important;
               }
 
-              /* remove top tabbar */ 
-        #titlebar { visibility: collapse !important; }
+              /* remove top tabbar 
+        #titlebar { visibility: collapse !important; } */ 
 
 
               /*================== URL BAR ==================*/
@@ -178,7 +174,7 @@
               /* #nav-bar { visibility: collapse !important; } */
                 /* hide horizontal tabs at the top of the window */
                 #TabsToolbar > * {
-                  visibility: collapse;
+                  # visibility: collapse;
                 }
 
                 /* hide navigation bar when it is not focused; use Ctrl+L to get focus */

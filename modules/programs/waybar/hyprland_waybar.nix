@@ -31,7 +31,7 @@ in
         });
         settings = [{
           position = "top";
-          margin = "12 12 0 12";
+          margin = "8 5 8 5";
           height = 16;
           modules-left = [ "wlr/workspaces" ];
           modules-center = [ "clock" "clock#time" ];

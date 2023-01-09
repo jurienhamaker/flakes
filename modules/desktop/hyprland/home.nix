@@ -64,11 +64,11 @@
             }
 
             general {
-              gaps_in = 3
+              gaps_in = 5
               gaps_out = 5
-              border_size = 3
+              border_size = 0
               col.active_border = rgb(3d3d3d)
-              col.inactive_border = rgba(0f0f0f)
+              col.inactive_border = rgba(0f0f0f00)
               layout = dwindle # master|dwindle 
             }
 
@@ -93,9 +93,9 @@
             decoration {
               multisample_edges = true
               active_opacity = 1.0
-              inactive_opacity = 1.0
+              inactive_opacity = 0.99
               fullscreen_opacity = 1.0
-              rounding = 0
+              rounding = 8
               blur = no 
               blur_size = 3
               blur_passes = 1
@@ -107,7 +107,7 @@
             # col.shadow = 
             # col.shadow_inactive
             # shadow_offset
-              dim_inactive = false
+              dim_inactive = true
             # dim_strength = #0.0 ~ 1.0
               blur_ignore_opacity = false
               col.shadow = rgba(1a1a1aee)
@@ -132,7 +132,7 @@
               animation = windowsOut, 1, 5, default, popin 80%
               animation = border, 1, 5, default
               animation = fade, 1, 8, default
-              animation = workspaces, 1, 6, overshot, slidevert
+              animation = workspaces, 1, 6, overshot, slide
             }
 
             gestures {
