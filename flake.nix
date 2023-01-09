@@ -29,7 +29,7 @@
   outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, hyprwm-contrib, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, ... }:
     let
       user = "jurien";
-      domain = "yugen-laptop";
+      domain = "Yugen";
       secrets = import ./secrets/secrets.nix;
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
