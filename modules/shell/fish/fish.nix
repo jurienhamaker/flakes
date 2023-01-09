@@ -12,6 +12,7 @@
   };
   home.file.".config/fish/conf.d/mocha.fish".text = import ./conf.d/mocha_theme.nix;
   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
+  home.file.".config/fish/config.fish".text = import ./functions/config.nix;
   home.file.".config/fish/functions/f.fish".text = import ./functions/f.nix;
   home.file.".config/fish/functions/l.fish".text = import ./functions/l.nix;
   home.file.".config/fish/functions/n.fish".text = import ./functions/n.nix;
@@ -23,6 +24,5 @@
   home.file.".config/fish/functions/owf.fish".text = import ./functions/owf.nix;
   home.file.".config/fish/functions/xdg-get.fish".text = import ./functions/xdg-get.nix;
   home.file.".config/fish/functions/xdg-set.fish".text = import ./functions/xdg-set.nix;
-  home.file.".config/fish/functions/aliases.fish".text = import ./functions/aliases.nix;
   home.file.".config/fish/functions/fish_prompt.fish".source = ./functions/fish_prompt.fish;
 }
