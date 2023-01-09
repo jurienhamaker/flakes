@@ -26,7 +26,7 @@
       };
     };
 
-  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, ... }:
+  outputs = inputs @ { self, nixpkgs, home-manager, nur, hyprland, hyprwm-contrib, impermanence, rust-overlay, hyprpicker, hypr-contrib, flake-utils, ... }:
     let
       user = "jurien";
       domain = "yugen-laptop";
