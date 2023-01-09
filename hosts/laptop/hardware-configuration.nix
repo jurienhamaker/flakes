@@ -14,35 +14,40 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/5cf68719-1f9b-4511-8331-c9b66e68fbec";
-      fsType = "f2fs";
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/be9c051e-2ccf-497b-b73e-f09c32ab29fe";
-      fsType = "f2fs";
-    };
-
-  fileSystems."/mnt/Programming" =
-    { device = "/dev/disk/by-uuid/c1bf91af-749e-45f3-964d-194d5b79dddd";
-      fsType = "ext4";
+    { device = "none";
+      fsType = "tmpfs";
+      options = [ "defaults" "size=8G" "mode=755" ]
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9B86-C735";
+    { device = "/dev/disk/by-uuid/5D2B-2D7D";
       fsType = "vfat";
     };
 
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/e14bdabb-f90a-4434-936c-15701e482061";
+      fsType = "ext4";
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/13ca8013-1596-442c-8c07-1c9f5d533823";
+      fsType = "ext4";
+    };
+
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/dfb44144-122e-4bf9-9d0b-3e533b0bcacf"; } ];
+    [ { device = "/dev/disk/by-uuid/683ad621-310a-4c94-9984-4963c1fa3d55"; }
+    ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp0s20f3.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  # high-resolution display
+  hardware.video.hidpi.enable = lib.mkDefault true;
 }
