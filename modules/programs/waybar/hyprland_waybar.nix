@@ -90,17 +90,17 @@ in
           #custom-power, #clock.time, #workspaces button.active {
             background-color: #b0b0b0;
             color: #0a0a0a;
-            border-radius: 0 12px 12px 0;
+            border-radius: 0 8px 8px 0;
           }
           #custom-power {
             background-color: #a54242;
           }
           #clock, #network {
-            border-radius: 12px 0 0 12px;
+            border-radius: 8px 0 0 8px;
           }
           #workspaces, #workspaces button {
-            padding: 0 4px 0 4px;
-            border-radius: 12px;
+            padding: 0 2px 0 2px;
+            border-radius: 8px;
           }
           #workspaces button.active {
             border-radius: 50%;

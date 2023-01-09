@@ -29,6 +29,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/mnt/Programming" =
+    { device = "/dev/disk/by-uuid/c1bf91af-749e-45f3-964d-194d5b79dddd";
+      fsType = "ext4";
+    };
+
   fileSystems."/etc/nixos" =
     { device = "/nix/persist/etc/nixos";
       fsType = "none";
