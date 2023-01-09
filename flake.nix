@@ -26,6 +26,7 @@
     let
       user = "jurien";
       domain = "yugen-laptop";
+      secrets = import ./secrets/secrets.nix;
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (
@@ -36,7 +37,6 @@
             overlays = [
             ];
           };
-          secrets = import ./secrets/secrets.nix;
         in
         {
           devShells = {
