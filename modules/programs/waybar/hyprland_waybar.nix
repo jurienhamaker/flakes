@@ -74,7 +74,10 @@ in
           };
         }];
       style = ''
-              #waybar {
+          * {
+            min-height: 0;
+          }
+          #waybar {
             background: transparent;
           }
           #workspaces, #workspaces button, #battery, #bluetooth, #network, #clock, #clock.time, #pulseaudio, #custom-bluetooth, #custom-power {
