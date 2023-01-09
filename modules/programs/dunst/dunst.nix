@@ -34,7 +34,7 @@
             };
             };
         };
-    }
+    };
     home.file.".config/dunst/icons/brightness.png".source = ./icons/brightness.png;
     home.file.".config/dunst/icons/muted.png".source = ./icons/muted.png;
     home.file.".config/dunst/icons/volume.png".source = ./icons/volume.png;

@@ -11,5 +11,5 @@
           background-image=/home/jurien/.config/weston/background.jpg
         '';
         ".config/weston/background.jpg".source = ./background.jpg;
-  }
+  };
 }
