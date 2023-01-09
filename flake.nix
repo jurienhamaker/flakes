@@ -3,6 +3,7 @@
 
   inputs =
     {
+      self.type = "git";
       nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
       neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
       rust-overlay.url = "github:oxalica/rust-overlay";
