@@ -7,15 +7,11 @@
   ./notification.nix
   ./music.nix
   ./search.nix
-  ./yt-dlp.nix
   ./mpv/mpv.nix
   ./imgview.nix
   ./lazygit.nix
   ./neofetch/neofetch.nix
   ./firefox/firefox.nix
-  ./zathura/zathura.nix
-  ./ranger/ranger.nix
-  ./fcitx5/fcitx5-theme.nix
   ./weston/weston.nix
   ./vscode.nix
 ]

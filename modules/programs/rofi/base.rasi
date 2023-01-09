@@ -1,5 +1,5 @@
 configuration {
-    font: "Noto Sans Semi-bold 11";
+    font: "Noto Sans Semi-bold 8";
     me-select-entry: "MouseSecondary";
     me-accept-entry: "MousePrimary";
     hover-select: true;

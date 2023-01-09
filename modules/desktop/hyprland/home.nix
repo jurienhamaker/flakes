@@ -77,7 +77,8 @@
           windowrule = float,^(nm-connection-editor)$
           windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
           bind = SUPER,RETURN,exec,footclient
-          bind = SUPER,SPACE,exec,rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/apps.rasi
+          bind = SUPER,D,exec,rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/apps.rasi
+          bind = SUPER,X,exec,rofi -show power-menu -modi power-menu:~/.config/rofi/scripts/rofi-power-menu -theme ~/.config/rofi/power-menu.rasi
           bind = SUPER,Q,killactive,
           bind = SUPER,left,movefocus,l
           bind = SUPER,right,movefocus,r
