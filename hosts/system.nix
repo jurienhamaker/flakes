@@ -44,6 +44,7 @@
       pciutils
       gdb
       killall
+      nodejs
       socat
       zip
       rar
