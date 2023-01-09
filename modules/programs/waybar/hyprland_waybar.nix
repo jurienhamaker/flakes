@@ -40,7 +40,7 @@ in
             interval = 3600;
           };
           "clock#time" = {
-            format = "{:%H:%M %p}";
+            format = "{:%H:%M}";
             interval = 60;
           };
           "network" = {
