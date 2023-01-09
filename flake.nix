@@ -16,6 +16,10 @@
         url = "github:hyprwm/Hyprland";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+      hyprwm-contrib = {
+        url = "github:hyprwm/contrib";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
       home-manager = {
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
@@ -69,7 +73,7 @@
           # Imports ./hosts/default.nix
           inherit (nixpkgs) lib;
           inherit secrets;
-          inherit inputs nixpkgs home-manager nur user hyprland impermanence rust-overlay hypr-contrib hyprpicker;
+          inherit inputs nixpkgs home-manager nur user hyprland hyprwm-contrib impermanence rust-overlay hypr-contrib hyprpicker;
         }
       );
     };

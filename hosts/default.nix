@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, impermanence, hyprpicker, hypr-contrib, secrets, ... }:
+{ lib, inputs, nixpkgs, home-manager, nur, user, hyprland, hyprwm-contrib, impermanence, hyprpicker, hypr-contrib, secrets, ... }:
 
 let
   system = "x86_64-linux"; # System architecture
@@ -37,6 +37,9 @@ in
             #   catppuccin-gtk = prev.callPackage ../overlays/catppuccin-gtk.nix { };
             # })
             (import ../overlays)
+            (self: super: {
+              hyprwm-contrib-packages = hyprwm-contrib.packages.${system};
+            })
             inputs.rust-overlay.overlays.default
           ];
         };
