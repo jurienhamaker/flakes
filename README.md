@@ -1,4 +1,4 @@
-[![NixOS](https://github.com/JurienHamaker/nixos-config/actions/workflows/NixOS.yml/badge.svg)](https://github.con/JurienHamaker/nixos-config/actions/workflows/NixOS.yml)
+[![NixOS](https://github.com/JurienHamaker/nixos-v2/actions/workflows/NixOS.yml/badge.svg)](https://github.con/JurienHamaker/nixos-config/actions/workflows/NixOS.yml)
 
 <h2 align="center">JurienHamaker's NixOS Config</h2>
 
