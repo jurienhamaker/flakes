@@ -63,7 +63,7 @@ in
           };
           "custom/power" = {
             format = "";
-            on-click = "rofi -show power-menu -modi power-menu:~/.config/rofi/scripts/rofi-power-menu -theme ~/.config/rofi/powermenu.rasi";
+            on-click = "rofi -show power-menu -modi power-menu:~/.config/rofi/scripts/rofi-power-menu -theme ~/.config/rofi/power-menu.rasi";
             tooltip = false;
           };
           "custom/bluetooth" = {

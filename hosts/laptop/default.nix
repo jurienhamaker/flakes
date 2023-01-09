@@ -11,6 +11,11 @@
     (import ../../modules/hardware) ++
     (import ../../modules/virtualisation);
 
+  security = {
+    rtkit.enable = true;
+    pam.services.swaylock = { };
+  };
+  
   users.mutableUsers = false;
   users.users.root.initialHashedPassword = secrets.jurien.password;
   users.users.${user} = {

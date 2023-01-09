@@ -1,7 +1,8 @@
 [
   ./foot.nix
   ./btop/btop.nix
-  ./rofi.nix
+  ./rofi/rofi.nix
+  ./dunst/dunst.nix
   ./cava.nix
   ./notification.nix
   ./music.nix
@@ -15,4 +16,5 @@
   ./zathura/zathura.nix
   ./ranger/ranger.nix
   ./fcitx5/fcitx5-theme.nix
+  ./weston/weston.nix
 ]
