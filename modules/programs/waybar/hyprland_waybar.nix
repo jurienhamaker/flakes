@@ -80,6 +80,7 @@ in
           #workspaces, #workspaces button, #battery, #bluetooth, #network, #clock, #clock.time, #pulseaudio, #custom-bluetooth, #custom-power {
             font-family: "NotoSans", "FontAwesome6Free";
             font-weight: bolder;
+            font-size: 10px;
             color: #b0b0b0;
             background-color: #0a0a0a;
             border-radius: 0;
