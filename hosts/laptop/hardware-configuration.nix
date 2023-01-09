@@ -16,7 +16,7 @@
   fileSystems."/" =
     { device = "none";
       fsType = "tmpfs";
-      options = [ "defaults" "size=8G" "mode=755" ]
+      options = ["defaults" "size=8G" "mode=755" ];
     };
 
   fileSystems."/boot" =
@@ -25,13 +25,25 @@
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/e14bdabb-f90a-4434-936c-15701e482061";
+    { device = "/dev/disk/by-uuid/f09bab9b-12ba-456c-a043-22b5bcc513b4";
       fsType = "ext4";
     };
 
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/13ca8013-1596-442c-8c07-1c9f5d533823";
       fsType = "ext4";
+    };
+
+  fileSystems."/etc/nixos" =
+    { device = "/nix/persist/etc/nixos";
+      fsType = "none";
+      options = [ "bind" ];
+    };
+
+  fileSystems."/var/log" =
+    { device = "/nix/persist/var/log";
+      fsType = "none";
+      options = [ "bind" ];
     };
 
   swapDevices =
