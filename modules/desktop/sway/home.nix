@@ -94,7 +94,7 @@
     # Placing software in a specific workspace #
     #------------------------------------------#
         #assign [app_id="telegram"]: workspace num  ber 10
-        for_window [app_id="icalingua"] move --no-auto-back-and-forth container to workspace QQ
+        # for_window [app_id="icalingua"] move --no-auto-back-and-forth container to workspace QQ
         for_window [app_id="icalingua"] focus
         for_window [app_id="telegram"] move --no-auto-back-and-forth container to workspace TG
         for_window [app_id="telegram"] focus

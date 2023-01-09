@@ -184,7 +184,7 @@
       bind = $mainMod, H, workspace, -1
       bind = $mainMod, period, workspace, e+1
       bind = $mainMod, comma, workspace,e-1
-      bind = $mainMod, Q, workspace,QQ
+      # bind = $mainMod, Q, workspace,QQ
       bind = $mainMod, T, workspace,TG
       bind = $mainMod, M, workspace,Music
 
@@ -341,10 +341,10 @@
       windowrule=move 25%-,nemo
       windowrule=size 960 540,nemo
       windowrule=opacity 0.95,title:Telegram
-      windowrule=opacity 0.95,title:QQ
+      # windowrule=opacity 0.95,title:QQ
       windowrule=opacity 0.95,title:NetEase Cloud Music Gtk4
       windowrule=animation slide right,foot
-      windowrule=workspace name:QQ, title:Icalingua++
+      # windowrule=workspace name:QQ, title:Icalingua++
       windowrule=workspace name:TG, title:Telegram
       windowrule=workspace name:Music, title:NetEase Cloud Music Gtk4
       windowrule=float,ncmpcpp
