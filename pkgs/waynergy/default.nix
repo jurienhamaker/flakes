@@ -8,6 +8,7 @@ stdenv.mkDerivation rec {
     owner = "r-c-f";
     repo = pname;
     rev = "v${version}";
+    sha256 = "pk1U3svy9r709ivFjBNXsa0mgc+nv2QTuwwHejB7B4Q=";
     fetchSubmodules = true;
   };
 
