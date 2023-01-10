@@ -9,17 +9,17 @@
   };
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors;
-    name = "Catppuccin-Frappe-Dark";
-    size = 14;
+    name = "Catppuccin-Mocha-Dark";
+    size = 12;
   };
   home.pointerCursor.gtk.enable = true;
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Frappe-Dark";
+      name = "Catppuccin-Mocha-Standard-Lavender-Dark";
     };
     cursorTheme = {
-      name = "Catppuccin-Frappe-Dark";
+      name = "Catppuccin-Mocha-Dark";
     };
     iconTheme = {
       name = "Papirus-Dark";

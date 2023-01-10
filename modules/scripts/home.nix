@@ -4,11 +4,6 @@ let
   cava-internal = pkgs.writeShellScriptBin "cava-internal" ''
     cava -p ~/.config/cava/config1 | sed -u 's/;//g;s/0/▁/g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;'
   '';
-  wallpaper_random = pkgs.writeShellScriptBin "wallpaper_random" ''
-    killall swaybg
-    killall dynamic_wallpaper
-    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-  '';
   grimblast_watermark = pkgs.writeShellScriptBin "grimblast_watermark" ''
         FILE=$(date "+%Y-%m-%d"T"%H:%M:%S").png
     # Get the picture from maim
@@ -53,36 +48,6 @@ let
     # # remove the other pictures
         rm $HOME/Pictures/src.png $HOME/Pictures/output.png
   '';
-  myswaylock = pkgs.writeShellScriptBin "myswaylock" ''
-    swaylock  \
-           --screenshots \
-           --clock \
-           --indicator \
-           --indicator-radius 100 \
-           --indicator-thickness 7 \
-           --effect-blur 7x5 \
-           --effect-vignette 0.5:0.5 \
-           --ring-color 3b4252 \
-           --key-hl-color 880033 \
-           --line-color 00000000 \
-           --inside-color 00000088 \
-           --separator-color 00000000 \
-           --grace 2 \
-           --fade-in 0.3
-  '';
-  dynamic_wallpaper = pkgs.writeShellScriptBin "dynamic_wallpaper" ''
-    killall swaybg
-    swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-    OLD_PID=$!
-    while true; do
-        sleep 120
-        swaybg -i $(find ~/Pictures/wallpaper/. -name "*.png" | shuf -n1) -m fill &
-        NEXT_PID=$!
-        sleep 5
-        kill $OLD_PID
-        OLD_PID=$NEXT_PID
-    done
-  '';
   launch_waybar = pkgs.writeShellScriptBin "launch_waybar" ''
         #!/bin/bash
         is_waybar_ServerExist=`ps -ef|grep -m 1 waybar|grep -v "grep"|wc -l`
@@ -98,11 +63,8 @@ in
 {
   home.packages = with pkgs; [
     cava-internal
-    wallpaper_random
     grimshot_watermark
     grimblast_watermark
-    myswaylock
-    dynamic_wallpaper
     launch_waybar
   ];
 }

@@ -13,6 +13,5 @@
   ./neofetch/neofetch.nix
   ./firefox/firefox.nix
   ./weston/weston.nix
-  ./vscode.nix
   ./gitkraken.nix
 ]

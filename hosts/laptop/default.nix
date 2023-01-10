@@ -3,9 +3,7 @@
 {
   imports =
     [ (import ./hardware-configuration.nix) ] ++
-    # [ (import ../../modules/desktop/sway/default.nix) ] ++
     [ (import ../../modules/desktop/hyprland/default.nix) ] ++
-    [ (import ../../modules/programs/fcitx5/fcitx5.nix) ] ++
     [ (import ../../modules/programs/gpg.nix) ] ++
     [ (import ../../modules/fonts/fonts.nix) ] ++
     (import ../../modules/hardware) ++
@@ -13,7 +11,6 @@
 
   security = {
     rtkit.enable = true;
-    pam.services.swaylock = { };
   };
   
   users.mutableUsers = false;
@@ -24,7 +21,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = with pkgs; [
-      feishu
       pkgs.sway-contrib.grimshot
       imagemagick
       rofi-wayland

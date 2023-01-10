@@ -1,5 +1,5 @@
 [
   ./docker.nix
-  ./qemu.nix
+  # ./qemu.nix
   # ./lxd.nix
 ]

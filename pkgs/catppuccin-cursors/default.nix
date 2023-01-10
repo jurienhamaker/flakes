@@ -8,8 +8,8 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-RCEVxeo3oBNqHogxWM/YqfPoQotirSQTMw15zCahWto=";
   };
   installPhase = ''
-    mkdir -p $out/share/icons/Catppuccin-Frappe-Dark
-    cp -va index.theme cursors $out/share/icons/Catppuccin-Frappe-Dark
+    mkdir -p $out/share/icons/Catppuccin-Mocha-Dark
+    cp -va index.theme cursors $out/share/icons/Catppuccin-Mocha-Dark
   '';
   meta = {
     description = "Soothing pastel mouse cursors";
