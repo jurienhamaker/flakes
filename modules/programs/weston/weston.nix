@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  home = {
+    packages = with pkgs; [
+      weston
+    ];
+  };
   home.file = {
     ".config/weston.ini".text = ''
           [libinput]
