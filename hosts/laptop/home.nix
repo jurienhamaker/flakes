@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, secrets, impermanence, home-manager, ... }:
+{ config, lib, pkgs, user, secrets, impermanence, ... }:
 
 {
   imports =
@@ -15,16 +15,15 @@
     username = "jurien";
     homeDirectory = "/home/jurien";
     file = {
-      ".ssh/id_rsa".text = secrets.jurien.sshKeys.private;
       ".ssh/id_rsa.pub".source = ../../secrets/id_rsa.pub;
     };
   };
 
-  home.activation.copySSHKey = home-manager.dag.entryAfter ["writeBoundary"] ''
+  home.activation.copySSHKey = lib.hm.dag.entryAfter ["writeBoundary"] ''
       install -D -m600 ${../../secrets/id_rsa} $HOME/.ssh/id_rsa
   '';
 
-  home.activation.authorizedKeys = home-manager.dag.entryAfter ["writeBoundary"] ''
+  home.activation.authorizedKeys = lib.hm.dag.entryAfter ["writeBoundary"] ''
       install -D -m600 ${../../secrets/id_rsa.pub} $HOME/.ssh/authorized_keys
   '';
 
