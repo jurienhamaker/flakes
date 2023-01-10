@@ -1,5 +1,7 @@
 { config, lib, pkgs, user, secrets, impermanence, ... }:
 
+with import <home-manager/modules/lib/dag.nix> { inherit lib; };
+
 {
   imports =
     # [ (import ../../modules/desktop/sway/home.nix) ] ++
