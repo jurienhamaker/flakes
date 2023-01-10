@@ -14,4 +14,5 @@
   ./firefox/firefox.nix
   ./weston/weston.nix
   ./vscode.nix
+  ./barrier.nix
 ]

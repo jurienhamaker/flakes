@@ -57,6 +57,7 @@ in
             tooltip = false;
           };
           "battery" = {
+            bat = "BAT0";
             format = "{icon}  {capacity}%";
             format-charging = "  {capacity}%";
             format-icons = [ "" "" "" "" "" ];
