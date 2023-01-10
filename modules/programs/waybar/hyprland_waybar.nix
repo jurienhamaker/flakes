@@ -36,6 +36,9 @@ in
           modules-left = [ "wlr/workspaces" ];
           modules-center = [ "clock" "clock#time" ];
           modules-right = [ "network" "pulseaudio" "custom/bluetooth" "battery" "custom/power" ];
+          "wlr/workspaces" = {
+            "sort-by-number": true
+          };
           "clock" = {
             format = "{:%a, %d %b %Y}";
             interval = 3600;
