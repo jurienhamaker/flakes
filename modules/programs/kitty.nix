@@ -19,7 +19,7 @@
       theme = "Catppuccin-Mocha";
       keybindings = { };
       font.name = "jetbrains mono nerd font";
-      font.size = 15;
+      font.size = 11;
     };
   };
 }

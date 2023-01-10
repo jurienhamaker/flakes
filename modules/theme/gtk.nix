@@ -10,7 +10,7 @@
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors;
     name = "Catppuccin-Frappe-Dark";
-    size = 16;
+    size = 14;
   };
   home.pointerCursor.gtk.enable = true;
   gtk = {
@@ -28,7 +28,7 @@
 
     font = {
       name = "JetBrainsMono Nerd Font";
-      size = 12;
+      size = 11;
     };
     gtk3.extraConfig = {
       gtk-xft-antialias = 1;
