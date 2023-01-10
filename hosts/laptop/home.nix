@@ -16,9 +16,18 @@
     homeDirectory = "/home/jurien";
     file = {
       ".ssh/id_rsa".text = secrets.jurien.sshKeys.private;
-      ".ssh/id_rsa.pub".text = secrets.jurien.sshKeys.public;
+      ".ssh/id_rsa.pub".source = ../../secrets/id_rsa.pub;
     };
   };
+
+  home.activation.copySSHKey = dagEntryAfter ["writeBoundary"] ''
+      install -D -m600 ${../../secrets/id_rsa} $HOME/.ssh/id_rsa
+  '';
+
+  home.activation.authorizedKeys = dagEntryAfter ["writeBoundary"] ''
+      install -D -m600 ${../../secrets/id_rsa.pub} $HOME/.ssh/authorized_keys
+  '';
+
   programs = {
     home-manager.enable = true;
   };
