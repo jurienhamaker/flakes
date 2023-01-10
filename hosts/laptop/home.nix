@@ -1,6 +1,4 @@
-{ config, lib, pkgs, user, secrets, impermanence, ... }:
-
-with import <home-manager/modules/lib/dag.nix> { inherit lib; };
+{ config, lib, pkgs, user, secrets, impermanence, home-manager, ... }:
 
 {
   imports =
@@ -22,11 +20,11 @@ with import <home-manager/modules/lib/dag.nix> { inherit lib; };
     };
   };
 
-  home.activation.copySSHKey = dagEntryAfter ["writeBoundary"] ''
+  home.activation.copySSHKey = home-manager.dag.entryAfter ["writeBoundary"] ''
       install -D -m600 ${../../secrets/id_rsa} $HOME/.ssh/id_rsa
   '';
 
-  home.activation.authorizedKeys = dagEntryAfter ["writeBoundary"] ''
+  home.activation.authorizedKeys = home-manager.dag.entryAfter ["writeBoundary"] ''
       install -D -m600 ${../../secrets/id_rsa.pub} $HOME/.ssh/authorized_keys
   '';
 
