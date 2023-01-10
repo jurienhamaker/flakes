@@ -17,4 +17,5 @@
   ./beekeeper-studio.nix
   ./waynergy.nix
   ./ferdium.nix
+  ./google-chrome.nix
 ]
