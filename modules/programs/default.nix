@@ -15,4 +15,5 @@
   ./weston/weston.nix
   ./vscode.nix
   ./barrier.nix
+  ./gitkraken.nix
 ]
