@@ -16,4 +16,5 @@
   ./gitkraken.nix
   ./beekeeper-studio.nix
   ./waynergy.nix
+  ./ferdium.nix
 ]
