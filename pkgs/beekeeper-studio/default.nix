@@ -11,7 +11,7 @@ let
   name = "${pname}-${version}";
   src = fetchurl {
     url = "https://github.com/beekeeper-studio/beekeeper-studio/releases/download/v${version}/Beekeeper-Studio-${version}.AppImage";
-    sha256 = "01vxcx2bf753f07y8ikklk2acdlrmxw8gi9nxv5p1kf465972c2a";
+    sha256 = "YZ1OZDGzBUKMWw7OeTCE0HMFAfaZ/HucwfAyzPyE8Gw=";
   };
   appimageContents = appimageTools.extractType2 {
     inherit name src;
