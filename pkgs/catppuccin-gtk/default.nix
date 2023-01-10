@@ -7,7 +7,7 @@ stdenv.mkDerivation rec {
   src = fetchzip {
     url =
       "https://github.com/catppuccin/gtk/releases/download/v0.4.0/Catppuccin-Mocha-Standard-Lavender-Dark.zip";
-    sha256 = "0k4psyikb9dcir7a7nw9byask55kc540zp92dhs4pamg22bhm2vm";
+    sha256 = "81Antym5Cfjw7c0gNJLZN6qyorsdjfGz/qyLGCEfyNM=";
     stripRoot = false;
   };
 
