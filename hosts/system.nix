@@ -4,7 +4,7 @@
   nixpkgs.system = "x86_64-linux";
 
   networking = {
-    hostName = "Yugen"; # Define your hostname.
+    hostName = "Yugen-work"; # Define your hostname.
     networkmanager.enable = true;
     hosts = {
     };
