@@ -37,7 +37,7 @@ in
           modules-center = [ "clock" "clock#time" ];
           modules-right = [ "network" "pulseaudio" "custom/bluetooth" "battery" "custom/power" ];
           "wlr/workspaces" = {
-            "sort-by-number": true
+            "sort-by-number" = true;
           };
           "clock" = {
             format = "{:%a, %d %b %Y}";
