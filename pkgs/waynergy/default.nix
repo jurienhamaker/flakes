@@ -1,6 +1,6 @@
-{ lib, fetchFromGitHub, meson, ninja, mkDerivation }:
+{ lib, fetchFromGitHub, meson, ninja, stdenv }:
 
-mkDerivation rec {
+stdenv.mkDerivation rec {
   pname = "waynergy";
   version = "0.0.15";
 
