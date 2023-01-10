@@ -33,6 +33,8 @@
 ├── pkgs
 │   ├── catppuccin-cursors
 │   ├── catppuccin-gtk
+│   ├── beekeeper
+│   ├── waynergy
 │   └── default.nix
 └── README.md
 ```
