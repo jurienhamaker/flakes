@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/share/themes/
-    cp -r Catppuccin-Frappe-Pink $out/share/themes
+    cp -r Catppuccin-Mocha-Standard-Lavender-Dark $out/share/themes
   '';
 
   meta = {
