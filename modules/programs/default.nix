@@ -14,4 +14,6 @@
   ./firefox/firefox.nix
   ./weston/weston.nix
   ./gitkraken.nix
+  ./beekeeper-studio.nix
+  ./waynergy.nix
 ]
