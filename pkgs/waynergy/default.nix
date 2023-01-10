@@ -13,10 +13,8 @@ mkDerivation rec {
 
   buildInputs = [  ];
   nativeBuildInputs = [ 
-    meson build
-    cd build
+    meson
     ninja
-    ninja install
   ];
 
   meta = {
