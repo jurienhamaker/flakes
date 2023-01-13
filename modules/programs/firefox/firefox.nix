@@ -118,125 +118,247 @@
     };
     profiles.default = {
       userChrome = ''
-              /*================== SIDEBAR ==================*/
-        #sidebar-box,
-              .sidebar-panel[lwt-sidebar-brighttext] {
-                background-color: var(--base_color1) !important;
-              }
+              /* 
+┌─┐┬┌┬┐┌─┐┬  ┌─┐
+└─┐││││├─┘│  ├┤ 
+└─┘┴┴ ┴┴  ┴─┘└─┘
+┌─┐┌─┐─┐ ┬      
+├┤ │ │┌┴┬┘      
+└  └─┘┴ └─
 
+by Miguel Avila
 
-              /* The default sidebar width. */
-              /* #sidebar-box { */
-              /*   overflow: hidden!important; */
-              /*   position: relative!important; */
-              /*   transition: all 300ms!important; */
-              /*   min-width: 60px !important; */
-              /*   max-width: 60px !important; */
-              /* } */
+*/
 
-              /* The sidebar width when hovered. */
-              /* #sidebar-box #sidebar,#sidebar-box:hover { */
-              /*   transition: all 300ms!important; */
-              /*   min-width: 60px !important; */
-              /*   max-width: 200px !important; */
-              /* } */
+/*
+ 
+┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
+│  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
+└─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
 
+*/
 
-              /* only remove TST headers */
-        #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-                display: none; /* remove sidebar header */
-                border-color: var(--base_color2) !important;
-              }
+:root {
+	--sfwindow: #0a0a0a;
+	--sfsecondary: #000;
+}
 
-              /*******************/
-              .sidebar-splitter {
-                /* display: none;  remove sidebar split line */
-                min-width: 1px !important;
-                max-width: 1px !important;
-                border-color: var(--base_color2) !important;
-              }
+/* Urlbar View */
 
-              /* remove top tabbar 
-        #titlebar { visibility: collapse !important; } */ 
+/*─────────────────────────────*/
+/* Comment this section if you */
+/* want to show the URL Bar    */
+/*─────────────────────────────*/
 
+.urlbarView {
+	/* display: none !important; */
+}
 
-              /*================== URL BAR ==================*/
-        #urlbar .urlbar-input-box {
-                text-align: center !important;
-              }
+/*─────────────────────────────*/
 
+/* 
+┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
+│  │ ││  │ │├┬┘└─┐
+└─┘└─┘┴─┘└─┘┴└─└─┘ 
+*/
 
-              * {
-              font-family: JetBrainsMono Nerd Font Mono !important;
-              font-size: 12pt !important;
-              }
+/* Tabs colors  */
+#tabbrowser-tabs:not([movingtab])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab
+	> .tab-stack
+	> .tab-background[multiselected='true'],
+#tabbrowser-tabs:not([movingtab])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab
+	> .tab-stack
+	> .tab-background[selected='true'] {
+	background-image: none !important;
+	background-color: var(--toolbar-bgcolor) !important;
+}
 
-              /* #nav-bar { visibility: collapse !important; } */
-                /* hide horizontal tabs at the top of the window */
-                #TabsToolbar > * {
-                  # visibility: collapse;
-                }
+/* Inactive tabs color */
+#navigator-toolbox {
+	background-color: var(--sfwindow) !important;
+}
 
-                /* hide navigation bar when it is not focused; use Ctrl+L to get focus */
-                #main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
-                  margin-top: -45px;
-                }
-                #navigator-toolbox {
-                  transition: 0.2s margin-top ease-out;
-                }
-      '';
-      userContent = ''
-                /*hide all scroll bars*/
-                /* *{ scrollbar-width: none !important } */
+/* Window colors  */
+:root {
+	--toolbar-bgcolor: var(--sfsecondary) !important;
+	--tabs-border-color: var(--sfsecondary) !important;
+	--lwt-sidebar-background-color: var(--sfwindow) !important;
+	--lwt-toolbar-field-focus: var(--sfsecondary) !important;
+	--tab-min-height: 32px !important;
+}
 
+/* Sidebar color  */
+#sidebar-box,
+.sidebar-placesTree {
+	background-color: var(--sfwindow) !important;
+}
 
-                * {
-                font-family: JetBrainsMono Nerd Font Mono;
-                }
+/* 
 
-                @-moz-document url-prefix("about:") {
-                    :root {
-                        --in-content-page-background: #1E1E2E !important;
-                    }
-                }
-        
-        
-                @-moz-document url-prefix(about:home), url-prefix(about:newtab){
+┌┬┐┌─┐┬  ┌─┐┌┬┐┌─┐            
+ ││├┤ │  ├┤  │ ├┤             
+─┴┘└─┘┴─┘└─┘ ┴ └─┘            
+┌─┐┌─┐┌┬┐┌─┐┌─┐┌┐┌┌─┐┌┐┌┌┬┐┌─┐
+│  │ ││││├─┘│ ││││├┤ │││ │ └─┐
+└─┘└─┘┴ ┴┴  └─┘┘└┘└─┘┘└┘ ┴ └─┘
 
+*/
 
-            body {
-                --newtab-background-color: #000000 !important;
-                --newtab-background-color-secondary: #101010 !important;
-            }
+/*
+ Hover for favorites
+*/
+#navigator-toolbox #PersonalToolbar {
+	min-height: 0 !important;
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+}
 
-            body[lwt-newtab-brighttext] {
-                --newtab-background-color: #000000 !important;
-                --newtab-background-color-secondary: #101010 !important;
+#navigator-toolbox #PersonalToolbar #personal-bookmarks {
+	max-height: 0;
+	transition: max-height 0.5s ease-out;
+}
 
-            }
+#navigator-toolbox:hover #PersonalToolbar {
+	max-height: 500px;
+	min-height: 0;
+	transition: max-height 0.5s ease-in;
+}
 
-            .top-site-outer .top-site-icon {
-                background-color: transparent !important;
+#navigator-toolbox:hover #PersonalToolbar #personal-bookmarks {
+	max-height: 500px;
+	transition: max-height 0.5s ease-in;
+}
 
-            }
+/* Tabs elements  */
+.tab-close-button {
+	/* display: none; */
+}
 
-            .top-site-outer .tile {
-                background-color: rgba(49, 49, 49, 0.4) !important;
-            }
+.tabbrowser-tab {
+	padding-top: 3px !important;
+}
 
-            .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
-                background: rgba(49, 49, 49, 0.3) !important;
-            }
+.tabbrowser-tab:not([pinned]) .tab-icon-image {
+	display: none !important;
+}
 
-            .top-site-outer .context-menu-button:is(:active, :focus) {
-                background-color: transparent !important;
-            }
+#nav-bar:not([tabs-hidden='true']) {
+	box-shadow: none;
+}
 
-            .search-wrapper .search-handoff-button{
-                border-radius: 40px !important;
-                background-color: rgba(49, 49, 49, 0.4) !important;
-            }
-        }
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+	> #tabbrowser-arrowscrollbox
+	> .tabbrowser-tab[first-visible-unpinned-tab] {
+	margin-inline-start: 0 !important;
+}
+
+:root {
+	--toolbarbutton-border-radius: 0 !important;
+	--tab-border-radius: 0 !important;
+	--tab-block-margin: 0 !important;
+}
+
+.tab-background {
+	border-right: 0px solid rgba(0, 0, 0, 0) !important;
+	margin-left: -4px !important;
+	border-top-left-radius: 5px !important;
+	border-top-right-radius: 5px !important;
+}
+
+.tabbrowser-tab:is([visuallyselected='true'], [multiselected])
+	> .tab-stack
+	> .tab-background {
+	box-shadow: none !important;
+}
+
+.tabbrowser-tab[last-visible-tab='true'] {
+	padding-inline-end: 0 !important;
+}
+
+#tabs-newtab-button {
+	/* padding-left: 0 !important; */
+}
+
+/* Url Bar  */
+#urlbar-input-container {
+	background-color: var(--sfsecondary) !important;
+	border: 1px solid rgba(0, 0, 0, 0) !important;
+}
+
+#urlbar-container {
+	margin-left: 0 !important;
+}
+
+#urlbar[focused='true'] > #urlbar-background {
+	box-shadow: none !important;
+}
+
+#navigator-toolbox {
+	border: none !important;
+}
+
+/* Bookmarks bar  */
+.bookmark-item .toolbarbutton-icon {
+	/* display: none; */
+}
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+	min-width: 1.6em;
+}
+
+/* Toolbar  */
+#tracking-protection-icon-container,
+#urlbar-zoom-button,
+/* #star-button-box, */
+#pageActionButton,
+#pageActionSeparator,
+/* #tabs-newtab-button, */
+#back-button,
+/* #PanelUI-button, */
+#forward-button,
+.tab-secondary-label {
+	display: none !important;
+}
+
+.urlbarView-url {
+	color: #dedede !important;
+}
+
+/* Disable elements  */
+#TabsToolbar .titlebar-spacer:first-child {
+	display: none !important;
+}
+
+#context-navigation,
+#context-savepage,
+#context-pocket,
+#context-sendpagetodevice,
+#context-selectall,
+#context-viewsource,
+#context-inspect-a11y,
+#context-sendlinktodevice,
+#context-openlinkinusercontext-menu,
+#context-bookmarklink,
+#context-savelink,
+#context-savelinktopocket,
+#context-sendlinktodevice,
+#context-searchselect,
+#context-sendimage,
+#context-print-selection {
+	display: none !important;
+}
+
+#context_bookmarkTab,
+#context_moveTabOptions,
+#context_sendTabToDevice,
+#context_reopenInContainer,
+#context_selectAllTabs,
+#context_closeTabOptions {
+	display: none !important;
+}
       '';
     };
   };
