@@ -2,7 +2,7 @@
 {
   home = {
     packages = with pkgs; [
-      google-chrome-stable
+      google-chrome
     ];
   };
 }

@@ -11,6 +11,30 @@
     ];
   };
   home.file = {
+    ".config/hypr/scripts/autostart.sh" = {
+      executable = true;
+      text = ''
+        #!/usr/bin/env bash
+        
+        IP=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' | tail -1)
+
+        echo $IP;
+
+        # Do not run these when home
+        if [[ $IP != "192.168.68"* ]]; then
+          firefox &
+          mailspring &
+          discord &
+          ferdi &
+        else
+        #	synergyc --name Work 192.168.68.106
+          waynergy --name Work -c 192.168.68.106
+        fi
+
+        gitkraken &
+        code &
+      '';
+    };
     ".config/hypr/scripts/brightness.sh" = {
       executable = true;
       text = ''
@@ -156,12 +180,12 @@
               focus_on_activate = true
             }
 
-            device:epic mouse V1 {
+            device:logitech-usb-receiver {
               sensitivity = -0.5
             }
 
-            monitor = e-DP1,2560x1440@60,auto,1
-            workspace = ,1
+            monitor = eDP-1,2560x1440@60,0x0,1
+            monitor = DP-1,2560x1440@60,2560x0,1
             
             windowrule = float,^(nm-connection-editor)$
             windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
@@ -207,7 +231,7 @@
             bind = SUPER_SHIFT,Q,exit,
             bind = SUPER,F,togglefloating,
             bind = SUPER,M,fullscreen,
-            bind = SUPER,PRINT,exec,${pkgs.hyprwm-contrib-packages.grimblast}/bin/grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png')
+            bind = PRINT,exec,${pkgs.hyprwm-contrib-packages.grimblast}/bin/grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png')
             bind = SUPER,L,exec,${swaylock} --screenshots --effect-scale 0.3
             bind = ,XF86MonBrightnessUp,exec,~/.config/hypr/scripts/brightness.sh -inc 2
             bind = ,XF86MonBrightnessDown,exec,~/.config/hypr/scripts/brightness.sh -dec 2
@@ -219,6 +243,17 @@
 
             bindm = SUPER,mouse:272,movewindow
             bindm = SUPER,mouse:273,resizewindow
+
+            wsbind=1,DP-1
+            wsbind=2,DP-1
+            wsbind=3,DP-1
+            wsbind=4,eDP-1
+            wsbind=5,eDP-1
+            wsbind=6,eDP-1
+            wsbind=7,DP-1
+            wsbind=8,DP-1
+            wsbind=9,DP-1
+            wsbind=10,DP-1
 
             exec-once = dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP
             exec-once = ${pkgs.gammastep}/bin/gammastep -l 19:72
