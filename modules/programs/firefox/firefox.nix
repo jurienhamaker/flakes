@@ -139,7 +139,7 @@ by Miguel Avila
 */
 
 :root {
-	--sfwindow: #0a0a0a;
+	--sfwindow: #050505;
 	--sfsecondary: #000;
 }
 
@@ -214,18 +214,17 @@ by Miguel Avila
 #navigator-toolbox #PersonalToolbar {
 	min-height: 0 !important;
 	max-height: 0;
-	transition: max-height 0.5s ease-out;
 }
 
 #navigator-toolbox #PersonalToolbar #personal-bookmarks {
 	max-height: 0;
 	transition: max-height 0.5s ease-out;
+	transition-delay: 500ms;
 }
 
 #navigator-toolbox:hover #PersonalToolbar {
 	max-height: 500px;
 	min-height: 0;
-	transition: max-height 0.5s ease-in;
 }
 
 #navigator-toolbox:hover #PersonalToolbar #personal-bookmarks {
@@ -243,7 +242,7 @@ by Miguel Avila
 }
 
 .tabbrowser-tab:not([pinned]) .tab-icon-image {
-	display: none !important;
+	/* display: none !important; */
 }
 
 #nav-bar:not([tabs-hidden='true']) {
@@ -307,6 +306,17 @@ by Miguel Avila
 }
 toolbarbutton.bookmark-item:not(.subviewbutton) {
 	min-width: 1.6em;
+}
+
+/* Browser */
+#browser {
+	padding: 4px;
+	background-color: var(--sfsecondary) !important;
+}
+
+#browser #appcontent {
+	overflow: hidden !important;
+	border-radius: 6px !important;
 }
 
 /* Toolbar  */
