@@ -6,7 +6,7 @@
         enable = true;
         settings = {
           main = {
-            font = "JetBrainsMono Nerd Font:weight=500:slant=italic:size=11";
+            font = "JetBrainsMono Nerd Font:weight=500:slant=italic:size=10";
             pad = "12x12";
           };
           colors = {

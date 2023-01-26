@@ -286,6 +286,7 @@ by Miguel Avila
 #urlbar-input-container {
 	background-color: var(--sfsecondary) !important;
 	border: 1px solid rgba(0, 0, 0, 0) !important;
+  text-align:center !important;
 }
 
 #urlbar-container {
@@ -326,9 +327,9 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #pageActionButton,
 #pageActionSeparator,
 /* #tabs-newtab-button, */
-#back-button,
+/* #back-button,*/
 /* #PanelUI-button, */
-#forward-button,
+/* #forward-button, */
 .tab-secondary-label {
 	display: none !important;
 }

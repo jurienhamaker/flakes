@@ -8,6 +8,7 @@
       swaybg
       swaylock-effects
       pamixer
+      light
     ];
   };
   home.file = {
@@ -40,8 +41,8 @@
       text = ''
         #!/usr/bin/env bash
         msgId="69"
-        xbacklight -fps 60 "$@"
-        curr="$(xbacklight -get)"
+        light "$@"
+        curr="$(light -G)"
         dunstify -a "changeBrightness" -i ~/.config/dunst/icons/brightness.png -u low -r "$msgId" "Brightness: $curr%"
       '';
     };
@@ -117,7 +118,7 @@
             decoration {
               multisample_edges = true
               active_opacity = 1.0
-              inactive_opacity = 0.99
+              inactive_opacity = 1.0
               fullscreen_opacity = 1.0
               rounding = 8
               blur = no 
@@ -132,7 +133,7 @@
             # col.shadow_inactive
             # shadow_offset
               dim_inactive = true
-            # dim_strength = #0.0 ~ 1.0
+              dim_strength = 0.2
               blur_ignore_opacity = false
               col.shadow = rgba(1a1a1aee)
             }
@@ -189,6 +190,7 @@
             
             windowrule = float,^(nm-connection-editor)$
             windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
+            windowrulev2 = float,class:^(code)$,title:^(Open Folder)$
 
             bind = SUPER,RETURN,exec,footclient
             bind = SUPER,D,exec,rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/apps.rasi
@@ -231,10 +233,10 @@
             bind = SUPER_SHIFT,Q,exit,
             bind = SUPER,F,togglefloating,
             bind = SUPER,M,fullscreen,
-            bind = PRINT,exec,${pkgs.hyprwm-contrib-packages.grimblast}/bin/grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png')
+            bind = SUPER,PRINT,exec,${pkgs.hyprwm-contrib-packages.grimblast}/bin/grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png')
             bind = SUPER,L,exec,${swaylock} --screenshots --effect-scale 0.3
-            bind = ,XF86MonBrightnessUp,exec,~/.config/hypr/scripts/brightness.sh -inc 2
-            bind = ,XF86MonBrightnessDown,exec,~/.config/hypr/scripts/brightness.sh -dec 2
+            bind = ,XF86MonBrightnessUp,exec,~/.config/hypr/scripts/brightness.sh -A 5
+            bind = ,XF86MonBrightnessDown,exec,~/.config/hypr/scripts/brightness.sh -U 5
             bind = ,XF86AudioMute,exec,~/.config/hypr/scripts/volume.sh -t
             bind = ,XF86AudioRaiseVolume,exec,~/.config/hypr/scripts/volume.sh -i 5
             bind = ,XF86AudioLowerVolume,exec,~/.config/hypr/scripts/volume.sh -d 5
@@ -255,7 +257,9 @@
             wsbind=9,DP-1
             wsbind=10,DP-1
 
-            exec-once = dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP
+            # exec-once = dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY HYPRLAND_INSTANCE_SIGNATURE XDG_CURRENT_DESKTOP
+            exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+            exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
             exec-once = ${pkgs.gammastep}/bin/gammastep -l 19:72
             exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i "${./background/default.png}" -m fill
             exec-once = TERM='xterm-256color' waybar
@@ -264,6 +268,7 @@
             exec-once = thunar --daemon
             exec-once = wl-paste -t text --watch ${pkgs.clipman}/bin/clipman store
             exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1
+            exec-once = gnome-keyring-daemon --daemonize
         '';
   };
 }

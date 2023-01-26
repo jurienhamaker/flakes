@@ -116,6 +116,8 @@
   };
 
   services = {
+    gnome.gnome-keyring.enable = true;
+    
     getty.autologinUser = "jurien";
     gvfs.enable = true;
     pipewire = {
