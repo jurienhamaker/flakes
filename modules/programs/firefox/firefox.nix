@@ -121,10 +121,10 @@
               /* 
 ┌─┐┬┌┬┐┌─┐┬  ┌─┐
 └─┐││││├─┘│  ├┤ 
-└─┘┴┴ ┴┴  ┴─┘└─┘
-┌─┐┌─┐─┐ ┬      
-├┤ │ │┌┴┬┘      
-└  └─┘┴ └─
+└─┘┴┴┴┴┴─┘└─┘
+┌─┐  ┌─┐─┐  ┬      
+├  ┤  │  │┌┴┬┘      
+└  └─┘  ┴└─
 
 by Miguel Avila
 
@@ -133,7 +133,7 @@ by Miguel Avila
 /*
  
 ┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
-│  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
+│  ││  │││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
 └─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
 
 */
@@ -366,8 +366,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 #context_moveTabOptions,
 #context_sendTabToDevice,
 #context_reopenInContainer,
-#context_selectAllTabs,
-#context_closeTabOptions {
+#context_selectAllTabs {
 	display: none !important;
 }
       '';

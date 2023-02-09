@@ -54,9 +54,9 @@
     light.enable = true;
   };
   environment = {
-    persistence."/nix/persist/" = {
+    persistence."/nix/persist" = {
       directories = [
-        "/etc/nixos" # bind mounted from /nix/persist/etc/nixos to /etc/nixos
+        "/etc/nixos"
         "/etc/NetworkManager"
         "/etc/v2raya"
         "/var/log"

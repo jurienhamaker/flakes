@@ -250,9 +250,9 @@
             wsbind=2,DP-1
             wsbind=3,DP-1
             wsbind=4,eDP-1
-            wsbind=5,eDP-1
+            wsbind=5,DP-1
             wsbind=6,eDP-1
-            wsbind=7,DP-1
+            wsbind=7,eDP-1
             wsbind=8,DP-1
             wsbind=9,DP-1
             wsbind=10,DP-1
