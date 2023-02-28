@@ -10,6 +10,7 @@
        [ "$TTY1" = "/dev/tty1" ] && exec dbus-run-session Hyprland
     '';
   };
+  home.file.".config/fish/conf.d/aliases.fish".text = import ./conf.d/aliases.nix;
   home.file.".config/fish/fish_variables".text = import ./fish_variables.nix;
   home.file.".config/fish/functions/l.fish".text = import ./functions/l.nix;
   home.file.".config/fish/functions/n.fish".text = import ./functions/n.nix;
