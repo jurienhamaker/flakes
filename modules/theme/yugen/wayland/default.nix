@@ -4,4 +4,5 @@ let
 in
 [
   ./notice
-] ++ [common fnKeys]
+  fnKeys
+] ++ common
