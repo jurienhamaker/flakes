@@ -12,7 +12,7 @@ in
   laptop = lib.nixosSystem {
     # Laptop profile
     inherit system;
-    specialArgs = { inherit inputs user secrets; };
+    specialArgs = { inherit inputs secrets user; };
     modules = [
       ./laptop/wayland #hyprland and sway,go to this dir,choose one
       # ./laptop/x11 #only bspwm
@@ -27,7 +27,7 @@ in
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = { inherit user secrets; };
+          extraSpecialArgs = { inherit user; };
           users.${user} = {
             imports = [
               (import ./laptop/wayland/home.nix)
