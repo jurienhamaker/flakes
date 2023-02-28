@@ -1,4 +1,4 @@
-{ pkgs, user }: {
+{ pkgs, user, ... }: {
   home-manager.users.${user}.xdg.configFile."rofi/scripts/rofi-wifi-menu" = {
     executable = true;
     text = ''

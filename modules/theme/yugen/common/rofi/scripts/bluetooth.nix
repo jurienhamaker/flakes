@@ -1,4 +1,4 @@
-{ user }: {
+{ user, ... }: {
   home-manager.users.${user}.xdg.configFile."rofi/scripts/rofi-bluetooth" = {
     executable = true;
     text = ''

@@ -1,4 +1,4 @@
-{ pkgs, user }: {
+{ pkgs, user, ... }: {
   home-manager.users.${user}.xdg.configFile = {
     "hypr/scripts/brightness.sh" = {
       executable = true;
