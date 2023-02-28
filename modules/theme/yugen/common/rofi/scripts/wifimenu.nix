@@ -1,4 +1,4 @@
-{ pkgs, user, ... }: {
+{ pkgs, ... }: {
     text = ''
       #!/usr/bin/env bash
       # Source: https://github.com/P3rf/rofi-network-manager

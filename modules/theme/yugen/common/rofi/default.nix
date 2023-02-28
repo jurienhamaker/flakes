@@ -44,7 +44,9 @@
           text-color: @foreground;
         }
       '';
-      wifimenu = import ./scripts/wifimenu.nix;
+      wifimenu = import ./scripts/wifimenu.nix {
+        inherit pkgs;
+      };
     in
     {
       ".config/rofi/scripts/rofi-bluetooth" = {
