@@ -1,6 +1,4 @@
 { pkgs, user, ... }: {
-  home-manager.users.${user}.xdg.configFile."rofi/scripts/rofi-wifi-menu" = {
-    executable = true;
     text = ''
       #!/usr/bin/env bash
       # Source: https://github.com/P3rf/rofi-network-manager
@@ -212,5 +210,4 @@
       }
       main
     '';
-  };
 }

@@ -1,6 +1,6 @@
 { pkgs, user, ... }: {
-  home-manager.users.${user}.xdg.configFile = {
-    "hypr/scripts/brightness.sh" = {
+  home.file  = {
+    ".config/hypr/scripts/brightness.sh" = {
       executable = true;
       text = ''
         #!/usr/bin/env bash
@@ -10,7 +10,7 @@
         dunstify -a "changeBrightness" -i ~/.config/dunst/icons/brightness.png -u low -r "$msgId" "Brightness: $curr%"
       '';
     };
-    "hypr/scripts/volume.sh" = {
+    ".config/hypr/scripts/volume.sh" = {
       executable = true;
       text =
         let

@@ -1,11 +1,5 @@
 { lib, pkgs, user, ... }: {
-  imports = [
-    scripts/fnKeys.nix
-    scripts/bluetooth.nix
-    scripts/powermenu.nix
-    scripts/wifimenu.nix
-  ];
-  home-manager.users.${user}.xdg.configFile =
+  home.file  =
     let
       rofi-theme = ''
         configuration {
@@ -50,9 +44,22 @@
           text-color: @foreground;
         }
       '';
+      wifimenu = import ./scripts/wifimenu.nix;
     in
     {
-      "rofi/apps.rasi".text = ''
+      ".config/rofi/scripts/rofi-bluetooth" = {
+        executable = true;
+        text = import ./scripts/bluetooth.nix;
+      };
+      ".config/rofi/scripts/rofi-power-menu" = {
+        executable = true;
+        text = import ./scripts/powermenu.nix;
+      };
+      ".config/rofi/scripts/rofi-wifi-menu" = {
+        executable = true;
+        text = wifimenu.text
+      };
+      ".config/rofi/apps.rasi".text = ''
         ${rofi-theme}
         configuration {
           drun-display-format: "{name}";
@@ -68,7 +75,7 @@
           y-offset: 0;
         }
       '';
-      "rofi/bluetooth.rasi".text = ''
+      ".config/rofi/bluetooth.rasi".text = ''
         ${rofi-theme}
         window {
           width: 175px;
@@ -80,7 +87,7 @@
           enabled: false;
         }
       '';
-      "rofi/powermenu.rasi".text = ''
+      ".config/rofi/powermenu.rasi".text = ''
         ${rofi-theme}
         window {
           width: 132px;
@@ -92,11 +99,12 @@
           lines: 3;
         }
       '';
-      "rofi/wlan.rasi".text = ''
+      ".config/rofi/wlan.rasi".text = ''
         ${rofi-theme}
         configuration {
           font: "SF Mono Bold 11";
         }
       '';
+      
     };
 }
