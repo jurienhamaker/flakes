@@ -25,7 +25,6 @@
   home.activation.copySSHKey = lib.hm.dag.entryAfter ["writeBoundary"] ''
       install -D -m600 ${../../secrets/id_rsa} $HOME/.ssh/id_rsa
   '';
-
   home.activation.authorizedKeys = lib.hm.dag.entryAfter ["writeBoundary"] ''
       install -D -m600 ${../../secrets/id_rsa.pub} $HOME/.ssh/authorized_keys
   '';
