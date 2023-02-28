@@ -1,4 +1,4 @@
-{ user }: {
+{ lib, pkgs, user, ... }: {
   imports = [
     scripts/fnKeys.nix
     scripts/bluetooth.nix
