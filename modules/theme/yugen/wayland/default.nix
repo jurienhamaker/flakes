@@ -4,5 +4,4 @@ in
 [
   ./notice
   ./fn-keys
-  fnKeys
 ] ++ common
