@@ -57,7 +57,7 @@
       };
       ".config/rofi/scripts/rofi-wifi-menu" = {
         executable = true;
-        text = wifimenu.text
+        text = wifimenu.text;
       };
       ".config/rofi/apps.rasi".text = ''
         ${rofi-theme}
