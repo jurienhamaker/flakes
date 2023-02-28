@@ -251,7 +251,7 @@
             exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
             exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
             exec-once = ${pkgs.gammastep}/bin/gammastep -l 19:72
-            exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i "${./background/default.png}" -m fill
+            exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i "${../../theme/yugen/common/wall/default.png}" -m fill
             exec-once = TERM='xterm-256color' waybar
             exec-once = foot -s
             exec-once = dunst
