@@ -15,15 +15,15 @@
     username = "${user}";
     homeDirectory = "/home/${user}";
     file = {
-      ".ssh/id_rsa.pub".source = ../../secrets/id_rsa.pub;
+      ".ssh/id_rsa.pub".source = ../../../secrets/id_rsa.pub;
     };
   };
 
   home.activation.copySSHKey = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      install -D -m600 ${../../secrets/id_rsa} $HOME/.ssh/id_rsa
+      install -D -m600 ${../../../secrets/id_rsa} $HOME/.ssh/id_rsa
   '';
   home.activation.authorizedKeys = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      install -D -m600 ${../../secrets/id_rsa.pub} $HOME/.ssh/authorized_keys
+      install -D -m600 ${../../../secrets/id_rsa.pub} $HOME/.ssh/authorized_keys
   '';
 
   programs = {
