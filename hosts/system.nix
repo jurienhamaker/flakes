@@ -30,7 +30,6 @@
     shells = with pkgs; [ fish ];
     systemPackages = with pkgs; [
       git
-      neovim
       wget
       neofetch
       exa
