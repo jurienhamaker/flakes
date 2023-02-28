@@ -1,4 +1,4 @@
-{ system, self, nixpkgs, inputs, user, ... }:
+{ system, self, nixpkgs, inputs, user, secrets, ... }:
 
 let
   pkgs = import nixpkgs {
@@ -12,7 +12,7 @@ in
   laptop = lib.nixosSystem {
     # Laptop profile
     inherit system;
-    specialArgs = { inherit inputs user; };
+    specialArgs = { inherit inputs user secrets; };
     modules = [
       ./laptop/wayland #hyprland and sway,go to this dir,choose one
       # ./laptop/x11 #only bspwm
@@ -22,13 +22,12 @@ in
       inputs.impermanence.nixosModules.impermanence
       inputs.nur.nixosModules.nur
       inputs.hyprland.nixosModules.default
-      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
       {
         home-manager = {
           useGlobalPkgs = true;
           useUserPackages = true;
-          extraSpecialArgs = { inherit user; };
+          extraSpecialArgs = { inherit user secrets; };
           users.${user} = {
             imports = [
               (import ./laptop/wayland/home.nix)

@@ -11,7 +11,6 @@
       hyprpicker.url = "github:hyprwm/hyprpicker";
       hypr-contrib.url = "github:hyprwm/contrib";
       flake-utils.url = "github:numtide/flake-utils";
-      sops-nix.url = "github:Mic92/sops-nix";
       picom.url = "github:yaocccc/picom";
       hyprland = {
         url = "github:hyprwm/Hyprland";
@@ -28,6 +27,7 @@
       user = "ruixi";
       domain = "rayxi.top";
       selfPkgs = import ./pkgs;
+      secrets = import ./secrets/secrets.nix;
     in
     flake-utils.lib.eachSystem [ "x86_64-linux" ]
       (
@@ -60,7 +60,6 @@
             secret = with pkgs; mkShell {
               name = "secret";
               nativeBuildInputs = [
-                sops
                 age
                 ssh-to-age
                 ssh-to-pgp
@@ -79,6 +78,7 @@
         import ./hosts {
           # Imports ./hosts/default.nix
           system = "x86_64-linux";
+          inherit secrets;
           inherit nixpkgs self inputs user;
         }
       );
