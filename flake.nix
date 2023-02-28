@@ -22,8 +22,8 @@
 
   outputs = inputs @ { self, nixpkgs, flake-utils, ... }:
     let
-      user = "ruixi";
-      domain = "rayxi.top";
+      user = "jurien";
+      domain = "yugen-work";
       selfPkgs = import ./pkgs;
       secrets = import ./secrets/secrets.nix;
     in

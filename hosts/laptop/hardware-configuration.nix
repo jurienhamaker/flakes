@@ -19,19 +19,19 @@
       options = ["defaults" "size=8G" "mode=755"];
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2784-5D95";
-      fsType = "vfat";
-    };
-
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/8c7195b8-06aa-4ccf-b528-909e315c5f46";
-      fsType = "ext4";
-    };
-
   fileSystems."/mnt/Programming" =
     { device = "/dev/disk/by-uuid/c1bf91af-749e-45f3-964d-194d5b79dddd";
       fsType = "ext4";
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/disk/by-uuid/f32c47b0-9a59-42ad-a621-9973dc1d0170";
+      fsType = "ext4";
+    };
+
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/BAD2-23BC";
+      fsType = "vfat";
     };
 
   fileSystems."/etc/nixos" =
@@ -40,14 +40,8 @@
       options = [ "bind" ];
     };
 
-  fileSystems."/var/log" =
-    { device = "/nix/persist/var/log";
-      fsType = "none";
-      options = [ "bind" ];
-    };
-
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/683ad621-310a-4c94-9984-4963c1fa3d55"; }
+    [ { device = "/dev/disk/by-uuid/e014072f-2aea-4de8-a687-0f5ecec8441b"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
