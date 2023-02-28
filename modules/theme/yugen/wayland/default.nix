@@ -1,8 +1,8 @@
 let
   common = import ../common;
-  fnKeys = import ./fnKeys;
 in
 [
   ./notice
+  ./fn-keys
   fnKeys
 ] ++ common
