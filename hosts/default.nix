@@ -42,7 +42,10 @@ in
             (import ../overlays)
               ++ [
               self.overlays.default
-              inputs.rust-overlay.overlays.default
+              inputs.rust-overlay.overlays.default,
+              (self: super: {
+                hypr-contrib-packages = inputs.hypr-contrib.packages.${system};
+              })
             ];
         };
       }
