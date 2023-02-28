@@ -15,7 +15,7 @@
       "185.199.108.133" = [ "raw.githubusercontent.com" ];
     };
   };
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "Europe/Amsterdam";
 
   i18n.defaultLocale = "en_US.UTF-8";
 

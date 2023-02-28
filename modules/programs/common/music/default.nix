@@ -6,8 +6,9 @@
       cava
       mpc-cli
       # youtube-music
-      netease-cloud-music-gtk
-      go-musicfox
+      # netease-cloud-music-gtk
+      # go-musicfox
+      spotify
     ];
   };
   programs = {
