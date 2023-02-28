@@ -75,11 +75,12 @@
           "Documents"
           "Videos"
           ".cache"
-          "Codelearning"
           ".npm-global"
           ".config"
           ".thunderbird"
           ".go-musicfox"
+          ".vscode-server"
+          ".vscode"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
