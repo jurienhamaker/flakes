@@ -188,7 +188,7 @@
             windowrule = float,^(nm-connection-editor)$
             windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
             windowrulev2 = float,class:^(code)$,title:^(Open Folder)$
-            bind = SUPER,RETURN,exec,kitty
+            bind = SUPER,RETURN,exec,kitty fish
             bind = SUPER,D,exec,rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/apps.rasi
             bind = SUPER,X,exec,rofi -show power-menu -modi power-menu:~/.config/rofi/scripts/rofi-power-menu -theme ~/.config/rofi/power-menu.rasi
             bind = SUPER,Q,killactive,
