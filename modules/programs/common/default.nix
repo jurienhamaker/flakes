@@ -9,4 +9,6 @@
   ./ferdium
   ./google-chrome
   ./mailspring
+  ./gitkraken
+  ./discord
 ]

@@ -21,11 +21,6 @@
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
     packages = (with pkgs; [
       tdesktop
-      qq
-      feishu
-      thunderbird
-      blender
-      dbeaver
     ]) ++ (with config.nur.repos;[
       linyinfeng.icalingua-plus-plus
     ]);
