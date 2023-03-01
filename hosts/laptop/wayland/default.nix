@@ -67,10 +67,9 @@
           ".cache"
           ".npm-global"
           ".config"
-          ".thunderbird"
-          ".go-musicfox"
           ".vscode-server"
           ".vscode"
+          ".gitkraken"
           "Flakes"
           "Kvm"
           { directory = ".gnupg"; mode = "0700"; }
@@ -122,6 +121,8 @@
   console.useXkbConfig = true;
 
   services = {
+    gnome.gnome-keyring.enable = true;
+    
     dbus.packages = [ pkgs.gcr ];
     getty.autologinUser = "${user}";
     gvfs.enable = true;
