@@ -19,11 +19,6 @@
     # shell = pkgs.fish;
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" "libvirtd" "video" "audio" ];
-    packages = (with pkgs; [
-      tdesktop
-    ]) ++ (with config.nur.repos;[
-      linyinfeng.icalingua-plus-plus
-    ]);
   };
   boot = {
     supportedFilesystems = [ "ntfs" ];
