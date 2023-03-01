@@ -2,7 +2,6 @@
 {
   home = {
     packages = with pkgs; [
-      gitkraken
       (pkgs.writeShellApplication {
         name = "gitkraken";
         text = "${pkgs.gitkraken}/bin/gitkraken --use-gl=desktop";

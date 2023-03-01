@@ -2,7 +2,6 @@
 {
   home = {
     packages = with pkgs; [
-      ferdium
       (pkgs.writeShellApplication {
         name = "ferdium";
         text = "${pkgs.ferdium}/bin/ferdium --use-gl=desktop";
