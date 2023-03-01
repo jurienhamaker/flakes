@@ -122,6 +122,7 @@
       pkgs.sway-contrib.grimshot
       flameshot
       grim
+      (writeScriptBin "sudo" ''exec doas "$@"'')
     ];
   };
 
