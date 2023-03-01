@@ -14,9 +14,6 @@
       };
     };
     profiles.default = {
-      settings = {
-        "browser.startup.homepage" = "file://${./homepage.html}";
-      };
       userChrome = ''
               /* 
               ┌─┐┬┌┬┐┌─┐┬  ┌─┐
