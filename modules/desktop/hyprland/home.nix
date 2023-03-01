@@ -197,6 +197,16 @@
             windowrule = float,^(nm-connection-editor)$
             windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
             windowrulev2 = float,class:^(code)$,title:^(Open Folder)$
+
+            # Window workspace rules
+            windowrulev2 = workspace 1,class:^(firefox)$
+            windowrulev2 = workspace 2,class:^(code)$
+            windowrulev2 = workspace 4,class:^(Ferdium)$
+            windowrulev2 = workspace 4,class:^(discord)$
+            windowrulev2 = workspace 5,class:^(GitKraken)$
+            windowrulev2 = workspace 6,class:^(Mailspring)$
+            
+
             bind = SUPER,RETURN,exec,kitty fish
             bind = SUPER,D,exec,rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/apps.rasi
             bind = SUPER,X,exec,rofi -show power-menu -modi power-menu:~/.config/rofi/scripts/rofi-power-menu -theme ~/.config/rofi/power-menu.rasi
