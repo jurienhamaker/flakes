@@ -24,15 +24,15 @@
         echo $IP;
         # Do not run these when home
         if [[ $IP != "192.168.68"* ]]; then
-          firefox &
-          mailspring &
-          discord &
-          ferdi &
+          nvidia-offload firefox &
+          mailspring --use-gl=desktop &
+          discord --use-gl=desktop &
+          ferdium --use-gl=desktop &
         else
         #	synergyc --name Work 192.168.68.106
           waynergy --name Work -c 192.168.68.106
         fi
-        gitkraken &
+        gitkraken --use-gl=desktop &
         code &
       '';
     };
@@ -256,6 +256,7 @@
             exec-once = wl-paste -t text --watch ${pkgs.clipman}/bin/clipman store
             exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1
             exec-once = gnome-keyring-daemon --daemonize
+            exec-once = ~/.config/hypr/scripts/autostart.sh
         '';
   };
 }
