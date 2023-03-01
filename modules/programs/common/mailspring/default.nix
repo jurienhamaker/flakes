@@ -15,5 +15,5 @@
       exec = "mailspring";
       desktopName = "Mailspring";
     })
-  ]
+  ];
 }

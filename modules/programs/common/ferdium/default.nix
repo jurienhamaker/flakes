@@ -15,5 +15,5 @@
       exec = "ferdium";
       desktopName = "Ferdium";
     })
-  ]
+  ];
 }

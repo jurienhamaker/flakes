@@ -15,5 +15,5 @@
       exec = "discord";
       desktopName = "Discord";
     })
-  ]
+  ];
 }

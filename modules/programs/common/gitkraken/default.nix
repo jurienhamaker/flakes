@@ -15,5 +15,5 @@
       exec = "gitkraken";
       desktopName = "GitKraken";
     })
-  ]
+  ];
 }
