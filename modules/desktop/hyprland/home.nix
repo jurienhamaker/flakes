@@ -200,11 +200,11 @@
 
             # Window workspace rules
             windowrulev2 = workspace 1,class:^(firefox)$
-            windowrulev2 = workspace 2,class:^(code)$
-            windowrulev2 = workspace 4,class:^(Ferdium)$
-            windowrulev2 = workspace 4,class:^(discord)$
-            windowrulev2 = workspace 5,class:^(GitKraken)$
-            windowrulev2 = workspace 6,class:^(Mailspring)$
+            windowrulev2 = workspace 2 silent,class:^(code)$,title:^(Visual Studio Code)$
+            windowrulev2 = workspace 4 silent,class:^(Ferdium)$
+            windowrulev2 = workspace 4 silent,class:^(discord)$
+            windowrulev2 = workspace 5 silent,class:^(GitKraken)$
+            windowrulev2 = workspace 6 silent,class:^(Mailspring)$
             
 
             bind = SUPER,RETURN,exec,kitty fish
