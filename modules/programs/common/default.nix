@@ -11,4 +11,5 @@
   ./mailspring
   ./gitkraken
   ./discord
+  ./beekeeper-studio
 ]
