@@ -188,7 +188,7 @@
             windowrule = float,^(nm-connection-editor)$
             windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
             windowrulev2 = float,class:^(code)$,title:^(Open Folder)$
-            bind = SUPER,RETURN,exec,footclient
+            bind = SUPER,RETURN,exec,kitty
             bind = SUPER,D,exec,rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/rofi/apps.rasi
             bind = SUPER,X,exec,rofi -show power-menu -modi power-menu:~/.config/rofi/scripts/rofi-power-menu -theme ~/.config/rofi/power-menu.rasi
             bind = SUPER,Q,killactive,
@@ -253,7 +253,6 @@
             exec-once = ${pkgs.gammastep}/bin/gammastep -l 19:72
             exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i "${../../theme/yugen/common/wall/default.png}" -m fill
             exec-once = TERM='xterm-256color' waybar
-            exec-once = foot -s
             exec-once = dunst
             exec-once = thunar --daemon
             exec-once = wl-paste -t text --watch ${pkgs.clipman}/bin/clipman store

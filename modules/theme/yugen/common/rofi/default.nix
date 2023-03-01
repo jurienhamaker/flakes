@@ -89,7 +89,7 @@
           enabled: false;
         }
       '';
-      ".config/rofi/powermenu.rasi".text = ''
+      ".config/rofi/power-menu.rasi".text = ''
         ${rofi-theme}
         window {
           width: 132px;
