@@ -3,7 +3,7 @@
 let
   default_wall = pkgs.writeShellScript "default_wall" ''
     killall dynamic_wallpaper
-    ${pkgs.swww}/bin/swww img "${../../theme/yugen/common/wall/default.png}" --transition-type random
+    ${pkgs.swww}/bin/swww img "${../../theme/yugen/common/wall/default.png}"
   '';
 in
 

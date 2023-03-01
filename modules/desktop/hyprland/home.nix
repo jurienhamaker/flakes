@@ -234,7 +234,7 @@
             bind = ,XF86AudioMute,exec,~/.config/hypr/scripts/volume.sh -t
             bind = ,XF86AudioRaiseVolume,exec,~/.config/hypr/scripts/volume.sh -i 5
             bind = ,XF86AudioLowerVolume,exec,~/.config/hypr/scripts/volume.sh -d 5
-            bindl = ,switch:Lid Switch,exec,${swaylock} --image ~/Pictures/Wallpapers/default --effect-scale 0.1
+            bindl = ,switch:Lid Switch,exec,${swaylock} --image"${../../theme/yugen/common/wall/default.png}" --effect-scale 0.1
             bindm = SUPER,mouse:272,movewindow
             bindm = SUPER,mouse:273,resizewindow
             wsbind=1,DP-1
@@ -251,9 +251,7 @@
             exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
             exec-once=systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
             exec-once = ${pkgs.gammastep}/bin/gammastep -l 19:72
-            exec-once = ${pkgs.swaybg}/bin/swaybg -o \* -i "${../../theme/yugen/common/wall/default.png}" -m fill
             exec-once = TERM='xterm-256color' waybar
-            exec-once = dunst
             exec-once = thunar --daemon
             exec-once = wl-paste -t text --watch ${pkgs.clipman}/bin/clipman store
             exec-once = ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1
