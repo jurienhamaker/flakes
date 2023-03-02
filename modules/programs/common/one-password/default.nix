@@ -2,7 +2,7 @@
 {
   home = {
     packages = with pkgs; [
-      1password-gui
+      _1password-gui
     ];
   };
 }
