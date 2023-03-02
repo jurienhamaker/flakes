@@ -246,7 +246,7 @@
             bind = SUPER_SHIFT,Q,exit,
             bind = SUPER,F,togglefloating,
             bind = SUPER,M,fullscreen,
-            bind = SUPER,PRINT,exec,${pkgs.hypr-contrib-packages.grimblast}/bin/grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png')
+            bind = ,PRINT,exec,${pkgs.hypr-contrib-packages.grimblast}/bin/grimblast --notify copysave area ~/Pictures/Screenshots/$(date +'%s_screenshot.png')
             bind = SUPER,L,exec,${swaylock} --screenshots --effect-scale 0.3
             bind = ,XF86MonBrightnessUp,exec,~/.config/hypr/scripts/brightness.sh -A 5
             bind = ,XF86MonBrightnessDown,exec,~/.config/hypr/scripts/brightness.sh -U 5

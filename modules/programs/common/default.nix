@@ -12,4 +12,5 @@
   ./gitkraken
   ./discord
   ./beekeeper-studio
+  ./one-password
 ]
