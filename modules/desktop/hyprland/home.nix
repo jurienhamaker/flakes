@@ -20,25 +20,25 @@
       text = ''
         #!/usr/bin/env bash
         
-        #IP=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' | tail -1)
-        #echo $IP;
+        IP=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p' | tail -1)
+        echo $IP;
         
         # Do not run these when home
-        #if [[ $IP != "192.168.68"* ]]; then
-        #  nvidia-offload firefox &
-        #  mailspring --use-gl=desktop &
-        #  discord --use-gl=desktop &
-        #  ferdium --use-gl=desktop &
-        #else
+        if [[ $IP != "192.168.68"* ]]; then
+          nvidia-offload firefox &
+          mailspring --use-gl=desktop &
+          discord --use-gl=desktop &
+          ferdium --use-gl=desktop &
+        else
         #	synergyc --name Work 192.168.68.106
-        #  waynergy --name Work -c 192.168.68.106
-        #fi
+          waynergy --name Work -c 192.168.68.106
+        fi
 
-        nvidia-offload firefox &
-        mailspring --use-gl=desktop &
-        discord --use-gl=desktop &
-        ferdium --use-gl=desktop &
-        waynergy --name Work -c 192.168.68.106
+        #nvidia-offload firefox &
+        #mailspring --use-gl=desktop &
+        #discord --use-gl=desktop &
+        #ferdium --use-gl=desktop &
+        #waynergy --name Work -c 192.168.68.106
         
         
         gitkraken --use-gl=desktop &

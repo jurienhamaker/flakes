@@ -180,7 +180,7 @@
               }
               /* Toolbar  */
               #tracking-protection-icon-container,
-              #urlbar-zoom-button,
+              /* #urlbar-zoom-button, */
               /* #star-button-box, */
               #pageActionButton,
               #pageActionSeparator,

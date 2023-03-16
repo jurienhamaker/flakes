@@ -7,7 +7,7 @@
       defaultTimeout = 5000;
       ignoreTimeout = true;
       sort = "+time";
-      width = 256;
+      width = 400;
       height = 500;
       margin = "10";
       padding = "5";

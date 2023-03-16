@@ -93,6 +93,7 @@
         }
         #custom-power {
           background-color: #a54242;
+          padding: 0 15px 0 8px;
         }
         #clock, #network {
           border-radius: 12px 0 0 12px;
@@ -104,7 +105,6 @@
         #workspaces button.active {
           border-radius: 50%;
           padding: 0 4px;
-          margin: 4px 0 4px 0;
         }
         #network.disconnected {
           color: #4a4a4a;
