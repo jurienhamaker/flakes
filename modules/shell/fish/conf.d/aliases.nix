@@ -20,4 +20,5 @@
   alias pn_bash="p; cd paperless; docker-compose exec ng-playground bash"
   
   alias nrs="cd ~/Flakes; sudo nixos-rebuild switch --flake '.?submodules=1#laptop'"
+  alias nrsu="cd ~/Flakes; sudo nixos-rebuild switch --update --flake '.?submodules=1#laptop'"
 ''

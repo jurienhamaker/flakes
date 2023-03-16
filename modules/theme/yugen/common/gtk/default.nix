@@ -1,23 +1,30 @@
 { config, pkgs, lib, inputs, user, ... }:
 
 {
+  
   home.sessionVariables = {
-    GTK_THEME = "Catppuccin-Frappe-Pink";
+    GTK_THEME = "Catppuccin-Frappe-Standard-Lavender-Dark";
   };
   home.pointerCursor = {
     package = pkgs.catppuccin-cursors;
-    name = "Catppuccin-Frappe-Dark";
+    name = "Catppuccin-Frappe-Light-Cursors";
     size = 16;
   };
   home.pointerCursor.gtk.enable = true;
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Frappe-Pink";
-      package = pkgs.catppuccin-frappe-gtk;
+      name = "Catppuccin-Frappe-Standard-Lavender-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "lavender" ];
+        size = "standard";
+        tweaks = [ "rimless" "black" ];
+        variant = "frappe";
+      };
     };
     cursorTheme = {
-      name = "Catppuccin-Frappe-Dark";
+      name = "Catppuccin-Frappe-Light-Cursors";
+      package = pkgs.catppuccin-cursors.frappeLight;
     };
     iconTheme = {
       name = "Papirus-Dark";

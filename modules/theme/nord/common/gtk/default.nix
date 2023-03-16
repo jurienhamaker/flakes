@@ -5,7 +5,7 @@
     GTK_THEME = "Nordic";
   };
   home.pointerCursor = {
-    package = pkgs.catppuccin-cursors;
+    package = pkgs.catppuccin-cursors-custom;
     name = "Catppuccin-Frappe-Dark";
     size = 16;
   };

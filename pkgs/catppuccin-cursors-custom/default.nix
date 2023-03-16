@@ -1,6 +1,6 @@
 { lib, stdenv, fetchzip, ... }:
 stdenv.mkDerivation rec {
-  pname = "cattpuccin-cursors";
+  pname = "cattpuccin-cursors-custom";
   version = "9999";
   src = fetchzip {
     url =
@@ -8,8 +8,8 @@ stdenv.mkDerivation rec {
     sha256 = "sha256-RCEVxeo3oBNqHogxWM/YqfPoQotirSQTMw15zCahWto=";
   };
   installPhase = ''
-    mkdir -p $out/share/icons/Catppuccin-Frappe-Dark
-    cp -va index.theme cursors $out/share/icons/Catppuccin-Frappe-Dark
+    mkdir -p $out/share/icons/Catppuccin-Frappe-Light
+    cp -va index.theme cursors $out/share/icons/Catppuccin-Frappe-Light
   '';
   meta = {
     description = "Soothing pastel mouse cursors";
