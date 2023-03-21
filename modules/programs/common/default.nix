@@ -13,4 +13,6 @@
   ./discord
   ./beekeeper-studio
   ./one-password
+  ./jdk
+  ./android-studio
 ]
