@@ -112,6 +112,7 @@
       imagemagick
       pkgs.sway-contrib.grimshot
       flameshot
+      android-udev-rules
       grim
       (writeScriptBin "sudo" ''exec doas "$@"'')
     ];
