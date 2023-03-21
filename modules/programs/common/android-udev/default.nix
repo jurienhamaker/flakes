@@ -3,7 +3,9 @@
   home = {
     packages = with pkgs; [
       android-tools
-      android-udev-rules
+      android-udev-rules.override {
+        src.owner = "jurienhamaker";
+      }
     ];
   };
 }
