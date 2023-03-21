@@ -64,6 +64,8 @@
           "Pictures"
           "Documents"
           "Videos"
+          "Android"
+          ".gradle"
           ".cache"
           ".npm-global"
           ".config"

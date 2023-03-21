@@ -15,4 +15,5 @@
   ./one-password
   ./jdk
   ./android-studio
+  ./android-udev
 ]
