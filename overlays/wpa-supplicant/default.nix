@@ -1,5 +1,5 @@
 final: prev: {
-    wpa_supplicant = cprev.wpa_supplicant.overrideAttrs (old: {
+    wpa_supplicant = prev.wpa_supplicant.overrideAttrs (old: {
         patches = old.patches ++ [ ./nemo-avoid-segfault.patch ];
     });
 }
