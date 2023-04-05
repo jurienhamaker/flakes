@@ -198,7 +198,7 @@
             windowrule = float,^(nm-connection-editor)$
             windowrulev2 = float,class:^(telegramdesktop)$,title:^(Media viewer)$
             windowrulev2 = float,class:^(code)$,title:^(Open Folder)$
-            windowrulev2 = float,title:^(Sharing Indicator)$
+            windowrulev2 = float,class:^(firefox)$,title:^(Firefox — Sharing Indicator)$
 
             # Window workspace rules
             windowrulev2 = workspace 1,class:^(firefox)$
