@@ -16,4 +16,5 @@
   ./jdk
   ./android-studio
   ./android-tools
+  ./waynergy
 ]
