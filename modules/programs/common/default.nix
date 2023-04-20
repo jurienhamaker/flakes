@@ -17,4 +17,5 @@
   ./android-studio
   ./android-tools
   ./waynergy
+  ./slack
 ]

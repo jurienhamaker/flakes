@@ -97,9 +97,9 @@
               float_switch_override_focus = 2
               numlock_by_default = true
               touchpad {
-              natural_scroll = yes
+                natural_scroll = yes
               }
-              sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
+              sensitivity = -0.8 # -1.0 - 1.0, 0 means no modification.
             }
             general {
               gaps_in = 5
@@ -188,9 +188,9 @@
               swallow_regex =
               focus_on_activate = true
             }
-            device:logitech-usb-receiver {
-              sensitivity = -0.5
-            }
+            # device:logitech-usb-receiver {
+            #   sensitivity = -0.1
+            # }
             
             monitor = eDP-1,2560x1440@60,0x0,1
             monitor = DP-1,2560x1440@60,2560x0,1
