@@ -99,7 +99,7 @@
               touchpad {
                 natural_scroll = yes
               }
-              sensitivity = -0.8 # -1.0 - 1.0, 0 means no modification.
+              sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
             }
             general {
               gaps_in = 5
@@ -188,9 +188,9 @@
               swallow_regex =
               focus_on_activate = true
             }
-            # device:logitech-usb-receiver {
-            #   sensitivity = -0.1
-            # }
+            device:logitech-usb-receiver {
+              sensitivity = -0.8
+            }
             
             monitor = eDP-1,2560x1440@60,0x0,1
             monitor = DP-1,2560x1440@60,2560x0,1
@@ -231,6 +231,11 @@
             bind = SUPER,8,workspace,8
             bind = SUPER,9,workspace,9
             bind = SUPER,0,workspace,10
+            bind = SUPER_CTRL,1,workspace,6
+            bind = SUPER_CTRL,2,workspace,7
+            bind = SUPER_CTRL,3,workspace,8
+            bind = SUPER_CTRL,4,workspace,9
+            bind = SUPER_CTRL,5,workspace,10
             bind = SUPER_SHIFT,1,movetoworkspacesilent,1
             bind = SUPER_SHIFT,2,movetoworkspacesilent,2
             bind = SUPER_SHIFT,3,movetoworkspacesilent,3

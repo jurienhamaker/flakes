@@ -21,4 +21,5 @@
   
   alias nrs="cd ~/Flakes; sudo nixos-rebuild switch --flake '.?submodules=1#laptop'"
   alias nrsu="cd ~/Flakes; sudo nixos-rebuild switch --update --flake '.?submodules=1#laptop'"
+  alias ncu="sudo nix-channel --update"
 ''
